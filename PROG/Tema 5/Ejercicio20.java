@@ -38,9 +38,14 @@ public class Ejercicio20 {
 		System.out.print("Introduzca el carácter del que se va a formar la pirámide: ");
 		caracter = s.next();
 		
-		System.out.println(caracter);
 		
-		for (int i = 1; i <= altura; i++){
+		for (int l = 0; l <= altura * 2; l++){
+			System.out.print(" ");
+		}
+		System.out.print(caracter + "\n");
+
+
+		for (int i = 1; i < altura; i++){
 			for (int k = i; k <= altura * 2; k++){
 					System.out.print(" ");
 			}
