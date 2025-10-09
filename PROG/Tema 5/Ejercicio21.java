@@ -27,7 +27,7 @@ public class Ejercicio21 {
             }
 
             //Calcular la media de los numeros impares
-            if ((numero > 0)  && (numero % 2 == 1)); {
+            if ((numero > 0)  && (numero % 2 == 1)) {
                 numeros_impares = numeros_impares + numero;
                 media_impares ++;
             }
@@ -38,8 +38,14 @@ public class Ejercicio21 {
             }
         }while (numero >= 0);
 
-        //Terminar de calcular la media de los numeros impares
-        media_impares = numeros_impares / media_impares;
+        //Terminar de calcular la media de los numeros impares (si NO es 0, ya que si es 0 se carga el programa)
+        if (numeros_impares == 0){
+
+        }else{
+                    media_impares = numeros_impares / media_impares;
+                    
+
+        }
 
         System.out.println("Has introducido " + cantidad_numeros + " números");
         System.out.println("La media de todos los numeros impares que has introducido es " + media_impares);
