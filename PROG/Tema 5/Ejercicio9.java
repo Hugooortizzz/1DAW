@@ -40,6 +40,8 @@ public class Ejercicio9 {
 			cifras ++;
 		}
 		System.out.println("El número tiene " + cifras + " cifras");
+
+		s.close();
 	}
 }
 

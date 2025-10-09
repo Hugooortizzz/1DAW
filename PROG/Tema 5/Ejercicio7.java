@@ -52,6 +52,7 @@ public class Ejercicio7 {
 				System.out.println("Lo siento, esa no es la combinación");
 			}
 		}
+		s.close();
 	}
 }
 

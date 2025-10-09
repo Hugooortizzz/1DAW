@@ -47,7 +47,7 @@ public class Ejercicio11 {
 		
 		
 		
-		
+		s.close();
 	}
 }
 

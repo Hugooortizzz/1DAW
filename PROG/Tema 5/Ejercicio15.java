@@ -48,7 +48,7 @@ public class Ejercicio15 {
 			
 			resultado = resultado * base;
 		}
-		
+		s.close();
 	}
 }
 

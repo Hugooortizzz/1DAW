@@ -46,6 +46,7 @@ public class Ejercicio17 {
 			total = total + i;
 	}
 	System.out.print("El total es " + total);
+	s.close();
 	}
 }
 

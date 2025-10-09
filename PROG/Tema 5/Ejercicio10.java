@@ -53,6 +53,8 @@ public class Ejercicio10 {
 		media = suma / numeros_introducidos;
 		
 		System.out.println("La media de los " + numeros_introducidos + " que ha introducido es " + media);
+
+		s.close();
 	}
 }
 

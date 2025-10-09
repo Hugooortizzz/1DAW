@@ -52,6 +52,7 @@ public class Ejercicio12 {
 			
 			
 		}
+		s.close();
 	}
 }
 

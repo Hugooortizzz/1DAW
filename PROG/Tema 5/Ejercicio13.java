@@ -47,6 +47,8 @@ public class Ejercicio13 {
 		}
 		
 		System.out.println("Has introducido " + positivos + " números positivos y " + negativos + " números negativos");
+
+		s.close();
 		
 	}
 }

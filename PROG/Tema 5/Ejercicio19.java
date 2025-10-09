@@ -48,6 +48,7 @@ public class Ejercicio19 {
 			}
 			System.out.print("\n");
 		}	
+		s.close();
 	}
 }
 

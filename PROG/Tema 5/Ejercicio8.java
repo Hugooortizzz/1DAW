@@ -37,6 +37,7 @@ public class Ejercicio8 {
 			multiplicacion = numero * i;
 			System.out.println(numero + " * " + i + " = " + multiplicacion);
 		}
+		s.close();
 	}
 }
 

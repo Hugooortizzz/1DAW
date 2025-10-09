@@ -44,6 +44,7 @@ public class Ejercicio18 {
 			System.out.println(i);
 		}
 		System.out.println(numero2);
+		s.close();
 	}
 }
 

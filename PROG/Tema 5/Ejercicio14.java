@@ -43,6 +43,8 @@ public class Ejercicio14 {
 			resultado =  resultado * base;
 		}
 		System.out.println(resultado);
+
+		s.close();
 	}
 }
 

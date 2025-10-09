@@ -40,6 +40,7 @@ public class Ejercicio20 {
 		for (int n = 0; n <= altura * 2; n++){//Caracteres de la última línea
 			System.out.print(caracter);
 		}
+		s.close();
 	}
 }
 

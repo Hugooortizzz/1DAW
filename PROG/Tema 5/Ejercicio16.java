@@ -47,5 +47,6 @@ public class Ejercicio16 {
 	}else{
 		System.out.println("El número " + numero + " es primo");
 	}
+	s.close();
 }
 }
