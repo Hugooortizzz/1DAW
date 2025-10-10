@@ -36,7 +36,7 @@ public class Ejercicio24 {
                 //el número que tocaría en ese caso menos 2 por un contador que va aumentando a medida que el número es mayor.
                 if (k > i){
                 System.out.print(numero * k - 2 * multiplo_resta);
-                multiplo_resta ++;  
+                multiplo_resta ++;
                 
                 }else{
                      System.out.print(numero * k);
