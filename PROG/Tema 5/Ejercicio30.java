@@ -60,5 +60,7 @@ public class Ejercicio30 {
         }
         
         System.out.println("Entre las " + hora_1 + ":00 horas del día " + dia_1 + " y las " + hora_2 + ":00 horas del día " + dia_2 + " han pasado " + horas + " horas");
+    
+        s.close();
     }
 }

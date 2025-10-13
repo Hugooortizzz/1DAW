@@ -24,5 +24,7 @@ public class Ejercicio31 {
                     System.out.print("\n");
                     }
         }
+
+        s.close();
     }
 }

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ejercicio34",
+            "request": "launch",
+            "mainClass": "Ejercicio34",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio33",
+            "request": "launch",
+            "mainClass": "Ejercicio33",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio32",
+            "request": "launch",
+            "mainClass": "Ejercicio32",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
             "name": "Ejercicio31",
             "request": "launch",
             "mainClass": "Ejercicio31",
