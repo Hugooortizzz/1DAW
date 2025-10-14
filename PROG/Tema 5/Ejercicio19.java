@@ -43,7 +43,7 @@ public class Ejercicio19 {
 			for (int k = i; k <= altura * 2; k++){
 					System.out.print(" ");
 			}
-			for (int j = 2; j <= i*2; j++){
+			for (int j = 1; j < i*2; j++){
 				System.out.print(caracter);
 			}
 			System.out.print("\n");

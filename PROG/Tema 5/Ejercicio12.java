@@ -48,9 +48,6 @@ public class Ejercicio12 {
 		
 			n = f0 + f1;
 			
-			
-			
-			
 		}
 		s.close();
 	}

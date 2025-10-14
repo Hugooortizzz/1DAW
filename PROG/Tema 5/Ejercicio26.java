@@ -11,6 +11,7 @@ public class Ejercicio26 {
         int digito;
         int numero_cifras;
         int cifras = 0;
+        int exponente;
 
         Scanner s = new Scanner(System.in);
 
@@ -25,11 +26,15 @@ public class Ejercicio26 {
             numero_cifras = numero_cifras / 10;
             cifras ++;
         }
+        exponente = cifras-1;
 
         for (int i = 1; i <= cifras; i++){
-            if ((int) ((numero % Math.pow(10,i)) / Math.pow(10,i-1)) == digito){
-                System.out.print(i);
+            if ((int) ((numero / Math.pow(10,exponente)) % 10) == digito){
+                System.out.print(i + " ");
+                
             }
+            exponente --;
         }
+        s.close();
     }
 }
