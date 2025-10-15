@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            border: solid;
+            border-width: 1px;
+            border-color: black;
+            border-collapse: collapse;
+        }
+
+        table td, th {
+            border: solid;
+            border-width: 1px;
+            border-color: black;
+            padding-inline: 20px;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+        
+        #programacion{
+            background-color:lightgreen;
+        }
+
+        #digitalizacion{
+            background-color: pink;
+        }
+        
+        #si{
+            background-color: lightcoral;
+        }
+
+        #ipe{
+            background-color: yellow;
+        }
+
+        #bd{
+            background-color: lightblue;
+        }
+
+        #sostenibilidad{
+            background-color: lightgray;
+        }
+
+        #ed{
+            background-color: orange;
+        }
+
+        #lmarc{
+            background-color: lightslategray
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Horario DAW</caption>
+        <tr>
+            <td></td>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <td>8:00-9:00</td>
+            <td rowspan="3" id="programacion">Programación</td>
+            <td id="ipe">IPE1</td>
+            <td rowspan="2" id="bd">Bases de Datos</td>
+            <td rowspan="3" id="ed">Entornos de Desarrollo</td>
+            <td rowspan="3" id="lmarc">Lenguajes de Marcas</td>
+        </tr>
+        <tr>
+            <td>9:00-10:00</td>
+            <td rowspan="2" id="programacion">Programación</td>
+        </tr>
+        <tr>
+            <td>10:00-11:00</td>
+            <td id="ipe">IPE1</td>
+        </tr>
+        <tr>
+            <td>11:00-11:30</td>
+            <td colspan="5">RECREO</td>
+        </tr>
+        <tr>
+            <td>11:30-12:30</td>
+            <td id="digitalizacion">Digitalización</td>
+            <td id="programacion">Programación</td>
+            <td rowspan="2" id="si">Sistemas Informáticos</td>
+            <td id="ipe">IPE1</td>
+            <td id="si">Sistemas Informáticos</td>
+        </tr>
+        <tr>
+            <td>12:30-13:30</td>
+            <td rowspan="2" id="si">Sistemas Informáticos</td>
+            <td rowspan="2" id="bd">Bases de Datos</td>
+            <td rowspan="2" id="bd">Bases de Datos</td>
+            <td rowspan="2" id="programacion">Programación</td>
+        </tr>
+        <tr>
+            <td>13:30-14:30</td>
+            <td id="sostenibilidad">Sostenibilidad</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -13,7 +13,7 @@ CREATE TABLE Empleados (
 
 CREATE TABLE Medicos(
     nif VARCHAR(9) NOT NULL PRIMARY KEY,
-    numero_colegiado INT NOT NULL,
+    n_colegiado INT NOT NULL,
     tipo_medico VARCHAR(255),
     FOREIGN KEY (nif) REFERENCES Empleados(nif)
 );
@@ -35,5 +35,20 @@ CREATE TABLE Vacaciones(
     fecha_inicio DATE NOT NULL,
     fecha_fin DATE NOT NULL,
     vacaciones_planificadas BOOLEAN,
-    FOREIGN KEY (nif) REFERENCES Empleados (nif)
+    FOREIGN KEY (nif) REFERENCES Empleados(nif)
+);
+
+CREATE TABLE Horarios(
+    
+);
+
+CREATE TABLE Pacientes(
+    nif VARCHAR(9) NOT NULL PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    direccion VARCHAR(255) NOT NULL,
+    telefono INT NOT NULL,
+    codigo_postal INT NOT NULL,
+    n_seguridadsocial INT NOT NULL,
+    n_colegiado INT NOT NULL,
+    FOREIGN KEY n_colegiado REFERENCES Medicos(n_colegiado)
 );
