@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "Factorial",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "CajeroAutomatico",
+            "request": "launch",
+            "mainClass": "CajeroAutomatico",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "AdivinaPalabra",
+            "request": "launch",
+            "mainClass": "AdivinaPalabra",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
             "name": "Ejercicio6",
             "request": "launch",
             "mainClass": "PROG.Tema6.Ejercicio6",
