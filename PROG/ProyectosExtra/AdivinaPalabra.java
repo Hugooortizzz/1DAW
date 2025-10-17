@@ -70,12 +70,12 @@ public class AdivinaPalabra {
         while ((vidas > 0) && (vidas <= 5)){
             System.out.println("Tienes " + vidas + " vidas");
             do{
-            System.out.print("¿Cuál es la palabra? (minúsculas y con la misma longitud): ");
-            intento = s.next();
+            System.out.print("¿Cuál es la palabra? (Con la misma longitud): ");
+            intento = s.nextLine();
             }while (intento.length() != palabra.length());
 
             for (int j = 0; j < longitud_palabra; j++){
-                if (intento.charAt(j) == palabra.charAt(j)){
+                if ((intento.charAt(j) == palabra.charAt(j)) || (intento.charAt(j) == Character.toUpperCase(palabra.charAt(j)))){
                     System.out.print(palabra.charAt(j));
                 }else{
                     System.out.print("-");
@@ -83,7 +83,7 @@ public class AdivinaPalabra {
             }
             System.out.print("\n");
 
-            if (intento == palabra){
+            if (intento.equalsIgnoreCase(palabra)){
                 System.out.println("¡Has acertado!");
                 vidas = 6;
             }else{

@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PiedraPapelTijeras",
+            "request": "launch",
+            "mainClass": "PiedraPapelTijeras",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "L",
+            "request": "launch",
+            "mainClass": "L",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "X",
+            "request": "launch",
+            "mainClass": "X",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "Prueba",
+            "request": "launch",
+            "mainClass": "Prueba",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
             "name": "Factorial",
             "request": "launch",
             "mainClass": "Factorial",
