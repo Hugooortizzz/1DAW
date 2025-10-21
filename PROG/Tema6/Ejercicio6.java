@@ -2,7 +2,7 @@
 debe adivinarlo y tiene para ello 5 oportunidades. Después de cada intento
 fallido, el programa dirá cuántas oportunidades quedan y si el número introducido es menor o mayor que el número secreto. */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Scanner;
 import java.lang.Math;

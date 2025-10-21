@@ -3,7 +3,7 @@ continuar tirando los dados una y otra vez hasta que en alguna tirada los dos
 dados tengan el mismo valor. */
 
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 

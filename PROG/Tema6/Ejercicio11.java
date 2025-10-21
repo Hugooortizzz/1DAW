@@ -3,7 +3,7 @@ aparecer de la forma: suspenso, suficiente, bien, notable o sobresaliente. Al
 final aparecerá el número de suspensos, el número de suficientes, el número
 de bienes, etc. */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 

@@ -1,4 +1,15 @@
-package PROG.Tema6;
+/* Realiza un simulador de máquina tragaperras simplificada que cumpla los
+siguientes requisitos:
+a) El ordenador mostrará una tirada que consiste en mostrar 3 figuras. Hay 5
+figuras posibles: corazón, diamante, herradura, campana y limón.
+b) Si las tres figuras son diferentes se debe mostrar el mensaje “Lo siento,
+ha perdido”.
+c) Si hay dos figuras iguales y una diferente se debe mostrar el mensaje “Bien,
+ha recuperado su moneda”.
+d) Si las tres figuras son iguales se debe mostrar “Enhorabuena, ha ganado
+10 monedas”. */
+
+package Tema6;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -22,23 +33,23 @@ public class Ejercicio16 {
                 numero_aleatorio = r.nextInt(5); //Este será el número que indicará que figura sale
                 switch (numero_aleatorio) { //Y este switch indicará a que figura corresponde cada número
                     case 0:
-                        figura = "corazón";
+                        figura = "Corazón";
                         break;
 
                     case 1:
-                        figura = "diamante";
+                        figura = "Diamante";
                         break;
 
                     case 2:
-                        figura = "herradura";
+                        figura = "Herradura";
                         break;
 
                     case 3:
-                        figura = "campana";
+                        figura = "Campana";
                         break;
 
                     case 4:
-                        figura = "limón";
+                        figura = "Limón";
                         break;
                 }
 

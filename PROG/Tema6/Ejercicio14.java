@@ -4,7 +4,7 @@ entre 0 y 100 - teniendo para ello 5 oportunidades. En cada intento fallido, el
 programa debe preguntar si el número que estás pensando es mayor o menor
 que el que te acaba de decir. */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Scanner;
 import java.util.Random;

@@ -14,14 +14,14 @@ public class Ejercicio23 {
 
         Scanner s = new Scanner(System.in);
 
-        while (total < 10000){
+        while (total < 10000){ //El bucle se repetirá mientras que total sea menor que 10000
             System.out.print("Introduzca un número: ");
-            numero = s.nextInt();
+            numero = s.nextInt();//Pedirá un número constantemente
 
-            total = total + numero;
-            contador ++;
+            total = total + numero; //Se sumará al total
+            contador ++; //Y se sumará uno al contador para hacer la media
         }
-        media = total / contador;
+        media = total / contador; //La media será el total de todos los números introducidos entre la cantidad de numeros
 
         System.out.println("El total acumulado ha sido de " + total);
         System.out.println("Has introducido " + contador + " numeros");

@@ -17,21 +17,21 @@ public class Ejercicio21 {
         Scanner s = new Scanner(System.in);
 
 
-        do{
+        do{ //Este bucle se repetirá mientras el número introducido sea positivo
             System.out.print("Introduzca un número positivo, (número negativo cerrará el programa): ");
             numero = s.nextInt();
             
-            //Calcular la cantidad de números introducidos
+            //Si el numero NO es negativo, se suma 1 al contador de numeros introducidos
             if (numero >= 0){
                 cantidad_numeros ++;
             }
 
-            //Calcular la media de los numeros impares
+            //Si el número es positivo y además es impar, se sumará al total de numeros impares y al contador de numeros impares
             if ((numero > 0)  && (numero % 2 == 1)) {
                 numeros_impares = numeros_impares + numero;
                 media_impares ++;
             }
-            if (numero % 2 == 0){//Calcular par mayor
+            if (numero % 2 == 0){//Si el número es par y si el numero es mayor que el par mayor actal, se establece como el nuevo par mayor.
                 if (numero > par_mayor){
                     par_mayor = (int) numero;
                 }
@@ -39,12 +39,8 @@ public class Ejercicio21 {
         }while (numero >= 0);
 
         //Terminar de calcular la media de los numeros impares (si NO es 0, ya que si es 0 se carga el programa)
-        if (numeros_impares == 0){
-
-        }else{
-                    media_impares = numeros_impares / media_impares;
-                    
-
+        if (numeros_impares != 0){
+            media_impares = numeros_impares / media_impares;
         }
 
         System.out.println("Has introducido " + cantidad_numeros + " números");

@@ -2,7 +2,7 @@
 entre uno de los siguientes: *, -, =, ., |, @. Las líneas deben tener una longitud
 aleatoria entre 1 y 40 caracteres. */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 

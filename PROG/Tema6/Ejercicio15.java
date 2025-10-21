@@ -8,7 +8,7 @@ compás mediante la barra vertical “|” (Alt + 1). El final de la melodía se
 con dos barras.
 d) La última nota de la melodía debe coincidir con la primera. */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 

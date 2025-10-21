@@ -6,7 +6,7 @@ sería el 1). Para convertir un número en una cadena de caracteres podemos
 usar String.valueOf(n). */
 
 
-package PROG.Tema6;
+package Tema6;
 
 import java.lang.Math;
 

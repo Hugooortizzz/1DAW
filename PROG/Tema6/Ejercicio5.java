@@ -2,7 +2,7 @@
 separados por espacios. Muestra también el máximo, el mínimo y la media
 de esos números. */
 
-package PROG.Tema6;
+package Tema6;
 
 public class Ejercicio5 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 

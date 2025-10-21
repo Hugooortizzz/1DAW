@@ -2,7 +2,7 @@
 y 100 y que no termine de generar números hasta que no saque el 24. El
 programa deberá decir al final cuántos números se han generad */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 

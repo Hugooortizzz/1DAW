@@ -1,7 +1,7 @@
 /* Muestra 20 números enteros aleatorios entre 0 y 10 (ambos incluidos) separados por espacios.
  */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.lang.Math;
 

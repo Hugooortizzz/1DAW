@@ -2,7 +2,7 @@
 con el código ascii entre el 32 y el 126. Puedes hacer casting con (char) para
 convertir un entero en un carácter. */
 
-package PROG.Tema6;
+package Tema6;
 
 import java.util.Random;
 
