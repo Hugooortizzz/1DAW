@@ -43,10 +43,10 @@ public class Ejercicio15 {
 		System.out.print("Introduzca el exponente final: ");
 		exponente = s.nextInt();
 		
-		for (int i = 1; i <= exponente; i++){
+		for (int i = 1; i <= exponente; i++){ //El bucle se repetirá hasta que la i (el exponente que va aumentando), sea mayor que el exponente final que hemos indicado
 			System.out.println(base + " ^ " + i + " = " + resultado);
 			
-			resultado = resultado * base;
+			resultado = resultado * base; //El resultado se irá multiplicando por la siguiente potencia
 		}
 		s.close();
 	}

@@ -38,19 +38,19 @@ public class Ejercicio10 {
 		
 		Scanner s = new Scanner(System.in);
 		
-		while (!acabar){
+		while (!acabar){ //La bandera del bucle es un booleano, que por defecto está en falso y mientras sea así el bucle se estará ejecutando
 			System.out.print("Introduzca un número (Para parar el programa introduzca un número negativo): ");
 			numero = s.nextInt();
 			
-			if (numero < 0){
+			if (numero < 0){ 
 				System.out.println("El programa ha dejado de contar");
-				acabar = true;
+				acabar = true; //Cuando el número introducido sea menor que 0 (es decir, negativo), el booleano se pondrá en verdadero y el bucle terminará
 			}else{
-				suma = suma + numero;
-				numeros_introducidos ++;
+				suma = suma + numero; //Cuando el número introducido sea positivo, se sumará al total de numeros introducidos
+				numeros_introducidos ++; //Esta variable va sumando la cantidad de números que hemos introducido para realizar la media posteriormente
 			}
 		}
-		media = suma / numeros_introducidos;
+		media = suma / numeros_introducidos; //Una vez ya se han dejado de introducir números, se calcula la media dividiendo el valor total de todos los números introducidos entre la cantidad de números.
 		
 		System.out.println("La media de los " + numeros_introducidos + " que ha introducido es " + media);
 

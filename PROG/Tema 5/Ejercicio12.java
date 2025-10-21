@@ -30,9 +30,9 @@ import java.util.Scanner;
 public class Ejercicio12 {
 	
 	public static void main (String[] args) {
-		int f0 = 0;
-		int f1 = 1;
-		int n = 1;
+		int f0 = 0; //He creado 3 variables que usaré para las operaciones, f0 que es el primer número de la suma
+		int f1 = 1; //f1 que es el segundo número de la suma
+		int n = 1; // Y n que es el resultado de la suma
 		int longitud;
 		
 		Scanner s = new Scanner(System.in);
@@ -40,13 +40,13 @@ public class Ejercicio12 {
 		System.out.print("¿Hasta que número quieres que mueste la serie de Fibonacci?: ");
 		longitud = s.nextInt();
 		
-		while (n <= longitud){
+		while (n <= longitud){ //El bucle se estará ejecutando hasta que el último número de la serie llegue a la longitud indicada
 			System.out.println(f0 + "+" +  f1 + " = " + n);
 			
-			f1 = f0;
-			f0 = n;
+			f0 = f1; //El primer número de la nueva suma se establece como el segundo número de la anterior suma
+			f1 = n; //El segundo número de la nueva suma se establece como el resultado de la anterior suma
+			n = f0 + f1; //Y se suma para obtener el resultado de la nueva suma
 		
-			n = f0 + f1;
 			
 		}
 		s.close();

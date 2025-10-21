@@ -1,3 +1,4 @@
+CREATE DATABASE Empleados;
 USE Empleados;
 
 CREATE TABLE Horarios(

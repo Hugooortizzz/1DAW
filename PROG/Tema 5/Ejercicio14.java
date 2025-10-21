@@ -39,10 +39,10 @@ public class Ejercicio14 {
 		System.out.print("Introduzca un exponente: ");
 		exponente = s.nextInt();
 		
-		for (int i = 1; i <= exponente; i++){
-			resultado =  resultado * base;
+		for (int i = 1; i <= exponente; i++){ //El límite del bucle será el exponente que indiquemos anteriormente, ya que se va a multiplicar por sí mismo ese numero de veces
+			resultado =  resultado * base; //Las multiplicaciones se van añadiendo a la variable del resultado
 		}
-		System.out.println(resultado);
+		System.out.println(resultado); //Al final, muesta el resultado de las multiplicaciones
 
 		s.close();
 	}

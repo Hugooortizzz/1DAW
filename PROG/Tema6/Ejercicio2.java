@@ -16,10 +16,11 @@ public class Ejercicio2 {
     String palo = "";
     String numero;
 
+    //Primero el programa genera los valores aleatorios, el numero que va a representar al palo y el número de la carta
     n_palo = (int) (Math.random() * 4);
     numero = String.valueOf((int) ((Math.random() * 13) + 1));
 
-    switch (n_palo){
+    switch (n_palo){ //Este switch indica a que palo corresponde cada valor aleatorio y lo asigna a la variable palo
         case (0):
         palo = "Picas";
         break;
@@ -37,7 +38,7 @@ public class Ejercicio2 {
         break;
     }
 
-    switch (numero){
+    switch (numero){ //Este switch hace lo mismo pero para los números que se representan como cadenas
         case ("1"):
         numero = "As";
         break;

@@ -23,7 +23,7 @@
  */
 
 import java.util.Scanner;
-import java.lang.Math;
+import java.lang.Math; //Para realizar las operaciones matemáticas he usado la clase Math
 
 public class Ejercicio11 {
 	
@@ -37,11 +37,11 @@ public class Ejercicio11 {
 		
 		System.out.println("Numero\tCuadrado\tCubo");
 		
-		for (int i = 0; i < 5; i++){
-			cuadrado = (int) (Math.pow(numero,2));
+		for (int i = 0; i < 5; i++){ //El bucle se repetirá 5 veces, ya que se representarán los 5 números siguientes al número introducido
+			cuadrado = (int) (Math.pow(numero,2)); 
 			cubo = (int) (Math.pow(numero,3));
 			System.out.println(numero + "\t" + cuadrado + "\t\t" + cubo);
-			numero ++;
+			numero ++; //El número irá incrementando hasta que alcanze su valor original más 5, cuando acaba el bucle
 			
 		}
 		

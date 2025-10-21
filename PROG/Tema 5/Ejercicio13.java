@@ -35,14 +35,14 @@ public class Ejercicio13 {
 		
 		System.out.print("Introduzca 10 números, positivos o negativos");
 		
-		for (int i = 0; i < 10; i++){
+		for (int i = 0; i < 10; i++){ //El bucle se repetirá 10 veces para poder introducir 10 números
 			System.out.print("Introduzca un número: ");
 			numero = s.nextInt();
 			
-			if (numero >= 0){
+			if (numero >= 0){ //Si el número es mayor que 0 (positivo), se sumará 1 al contador de positivos
 				positivos ++;
 			}else {
-				negativos ++;
+				negativos ++; //En cualquier otro caso (numero menor que 0, negativo), se sumará 1 al contador de negativos
 			}
 		}
 		

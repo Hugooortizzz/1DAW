@@ -41,9 +41,15 @@ public class Ejercicio18 {
 		numero2 = s.nextInt();
 		
 		for(int i = numero1; i <= numero2; i = i + 7) {
-			System.out.println(i);
+			if (i != numero2){ //He creado esta condicion ya que no quiero que el bucle muestre el segundo número introducido, ya que se va a mostrar fuera del bucle.
+				System.out.println(i);
+			}
 		}
+
+		//El ejercicio no lo especifica pero quiero que siempre se muestre al final por pantalla el segundo número introducido
 		System.out.println(numero2);
+		
+		
 		s.close();
 	}
 }

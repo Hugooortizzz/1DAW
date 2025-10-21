@@ -11,7 +11,8 @@ public class Ejercicio3 {
         
         n_palo = (int) (Math.random()*4);
 
-        numero = String.valueOf((int) ((Math.random()*10)+1));
+        numero = String.valueOf((int) ((Math.random()*10)+1)); //Este ejercicio es igual que el anterior, pero el número aleatorio debe
+        //estar entre el 1 y el 10 en vez de entre el 1 y el 13
 
         switch (n_palo){
             case (0):

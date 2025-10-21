@@ -30,24 +30,24 @@ import java.util.Scanner;
 public class Ejercicio7 {
 	
 	public static void main (String[] args) {
-		int establecer_contraseña = 0; 
-		int contraseña;
+		int establecer_contraseña = 0; //Esta variable será la contraseña que definamos en primer lugar
+		int contraseña; //Esta variable será la que usemos como intento de introducir la contraseña
 		
 		Scanner s = new Scanner(System.in); 
 		
-		while (establecer_contraseña > 9999 || establecer_contraseña < 1000){
+		while (establecer_contraseña > 9999 || establecer_contraseña < 1000){ //Este bucle impedirá continuar al programa si la contraseña no tiene 4 cifras
 			System.out.print("Establezca una contraseña de 4 cifras: ");
 			establecer_contraseña = s.nextInt();
 			}
 	
 		
-		for (int i = 0; i<4; i++){
+		for (int i = 0; i<4; i++){ //Este segundo bucle se repetirá 4 veces, ya que solo tenemos 4 intentos para "adivinar" la contraseña
 			System.out.print("Introduzca la contraseña: ");
 			contraseña = s.nextInt();
 			
 			if (contraseña == establecer_contraseña){
 				System.out.println("La caja fuerte se ha abierto satisfactoriamente");
-				i = 4;
+				i = 4; //Cuando acertamos la contraseña, el contador sale del límite del bucle para acabarlo
 			}else{
 				System.out.println("Lo siento, esa no es la combinación");
 			}

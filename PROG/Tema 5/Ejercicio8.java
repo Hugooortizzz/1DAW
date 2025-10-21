@@ -33,9 +33,9 @@ public class Ejercicio8 {
 		System.out.print("Introduzca un número para conocer su tabla de multiplicar: ");
 		numero = s.nextInt();
 		
-		for (int i = 1; i <= 10; i++){
-			multiplicacion = numero * i;
-			System.out.println(numero + " * " + i + " = " + multiplicacion);
+		for (int i = 1; i <= 10; i++){ //El bucle se repetirá 10 veces para representar las 10 multiplicaciones de la tabla
+			multiplicacion = numero * i; //En cada repetición del bucle, el número que ha introducido el usuario por pantalla se multiplicará por el valor de la variable local en ese momento (1, 2, 3, etc.)
+			System.out.println(numero + " * " + i + " = " + multiplicacion); //Y se mostrará por pantalla
 		}
 		s.close();
 	}

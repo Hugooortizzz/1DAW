@@ -39,12 +39,12 @@ public class Ejercicio19 {
 		System.out.print("Introduzca el carácter del que se va a formar la pirámide: ");
 		caracter = s.next();
 		
-		for (int i = 1; i <= altura; i++){
-			for (int k = i; k <= altura * 2; k++){
-					System.out.print(" ");
+		for (int i = 1; i <= altura; i++){ //Este primer bucle indicará las líneas que va a tener, siendo el límite el número que introduzcamos para la altura
+			for (int k = altura - i; k > 0; k--){ //Este segundo bucle introducirá los espacios a la izquierda, empezando en el valor de la altura que hemos introducido,
+					System.out.print(" "); //actuando como una especie de triángulo rectángulo invertido de espacios
 			}
-			for (int j = 1; j < i*2; j++){
-				System.out.print(caracter);
+			for (int j = 1; j < i*2; j++){ //Este tercer y último bucle pinta los caracteres, empezando j por el 1 mientras que j sea menor al número de línea por 2...
+				System.out.print(caracter); //sin incluir este último, para que así pinte un número de caracteres impar en cada línea (que queda mejor).
 			}
 			System.out.print("\n");
 		}	

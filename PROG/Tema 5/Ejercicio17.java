@@ -36,14 +36,14 @@ public class Ejercicio17 {
 	System.out.print("Introduzca un valor para sumar sus 100 números siguientes (mayor que 0): ");
 	numero = s.nextInt();
 	
-	while (numero < 0){
-			System.out.print("Introduzca un valor válido");
+	while (numero < 0){ //Este bucle impedirá al programa continuar si el número introducido no es mayor que 0
+			System.out.println("Introduzca un valor válido");
 			System.out.print("Introduzca un valor para sumar sus 100 números siguientes (mayor que 0): ");
 			numero = s.nextInt();
 	}
 		
-	for (int i = numero; i <= numero + 100; i++){
-			total = total + i;
+	for (int i = numero; i <= numero + 100; i++){ //Con el valor de la variable local del bucle empezando en el número introducido, el bucle se repetirá hasta que esta llegue al número más 100
+			total = total + i; //El número se irá sumando al total
 	}
 	System.out.print("El total es " + total);
 	s.close();

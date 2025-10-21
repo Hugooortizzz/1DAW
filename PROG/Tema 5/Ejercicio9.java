@@ -35,9 +35,9 @@ public class Ejercicio9 {
 		System.out.print("Introduzca un número: ");
 		numero = s.nextInt();
 		
-		while (numero > 0){
-			numero = numero / 10;
-			cifras ++;
+		while (numero > 0){ //Hasta que el bucle sea 0...
+			numero = numero / 10; //... el programará irá dividiendo entre 10, para así ir "desplazando la coma hacia la izquierda" hasta que no haya mas unidades...
+			cifras ++; //El hecho de que se repita el bucle significa que siguen quedando cifras, por lo que se sumará 1 al contador de cifras.
 		}
 		System.out.println("El número tiene " + cifras + " cifras");
 

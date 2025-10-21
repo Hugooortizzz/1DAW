@@ -36,16 +36,16 @@ public class Ejercicio16 {
 		System.out.print("Introduzca un número para saber si es primo: ");
 		numero = s.nextInt();
 		
-		for (int i = 1; i <= numero; i++){
-			if (numero % i == 0){
-				divisible ++;
+		for (int i = 1; i <= numero; i++){ //El bucle, comenzando la i en 1, se repetirá hasta que este sea igual al número, para que compare todos los números desde el 1 hasta él mismo
+			if (numero % i == 0){ 
+				divisible ++; //Cuando el número sea divisible entre i, se sumará uno al contador de números por el que es divisible el número introducido
 			}
 		}
 		
 		if (divisible > 2){
-			System.out.println("El número " + numero + " no es primo");
+			System.out.println("El número " + numero + " no es primo"); //Cuanto el número sea divisible entre más de dos números, significará que NO es primo
 	}else{
-		System.out.println("El número " + numero + " es primo");
+		System.out.println("El número " + numero + " es primo"); //Por el contrario, cuando el número sea divisible por 2 o menos números (el 1 y él mismo), significará que el número SI es primo.
 	}
 	s.close();
 }
