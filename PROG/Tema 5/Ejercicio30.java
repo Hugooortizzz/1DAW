@@ -9,58 +9,47 @@ import java.util.Scanner;
 
 public class Ejercicio30 {
     public static void main(String[] args) {
-        
-    int dia_1 = 0;
-    int hora_1 = 0;
-    int dia_2 = 0;
-    int hora_2 = 0;
-    int horas = 0;
-    boolean bucle = true;
+        int dia1;
+        int dia2;
+        int hora1;
+        int hora2;
+        int horas;
+
+        Scanner s = new Scanner(System.in);
 
 
-    Scanner s = new Scanner(System.in);
+        //Este primer do while impedirá al programa avanzar hasta que el segundo día no sea mayor que el primero
+        do{
+            //Este bloque de 4 bucles impide al programa empezar si no se introducen correctamente los datos
+            do{
+                System.out.print("Introduzca el primer día: ");
+                dia1 = s.nextInt();
+            }while ((dia1 < 1) ||(dia1 > 7));
 
-    while (bucle){
-        System.out.print("Introduzca el primer día (1-7): ");
-        dia_1 = s.nextInt();
-        if(dia_1 >= 1 && dia_1 <= 7){
-            bucle = false;
-        }
+            do{
+                System.out.print("Introduzca la hora del primer día: ");
+                hora1 = s.nextInt();
+            }while ((hora1 < 0) ||(hora1 > 23));
 
-        System.out.print("Introduzca la hora del primer día (00-23): ");
-        hora_1 = s.nextInt();
-        if(hora_1 >= 0 && hora_1 <= 23){
-            bucle = false;
-        }
+            do{
+                System.out.print("Introduzca el segundo día: ");
+                dia2 = s.nextInt();
+            }while ((dia2 < 1) ||(dia2 > 7));
 
-        System.out.print("Introduzca el segundo día (1-7): ");
-        dia_2 = s.nextInt();
-        if(dia_2 >= 1 && dia_2 <= 7){
-            bucle = false;
-        }
-        }
+            do{
+                System.out.print("Introduzca la hora del segundo día: ");
+                hora2 = s.nextInt();
+            }while ((hora2 < 0) ||(hora2 > 23));
+            if (dia2 < dia1){
+                System.out.println("El primer día debe ser mayor que el segundo");
+            }
+        }while (dia2 < dia1);
 
-        System.out.print("Introduzca la hora del segundo día (00-23): ");
-        hora_2 = s.nextInt();
-        if(hora_2 >= 0 && hora_2 <= 23){
-            bucle = false;
-        }
-
-        for (int i = dia_1; i < dia_2; i++){
-            horas ++;
-        }
-
-        horas = horas * 24;
+        //Finalmente, se restaran los días que hay entre los dos días y se pasará a horas, y a eso se le sumará la diferencia entre las dos horas
+        horas = ((dia2 - dia1) * 24) + (hora2 - hora1);
+        System.out.print("Desde las " + hora1 + " del día " + dia1 + " hasta las " + hora2 + " del dia " + dia2 + " han pasado " + horas + " horas");
 
 
-        if (hora_1 > hora_2){
-            horas = horas + hora_2 - hora_1;
-        }else{
-            horas = horas - hora_1 + hora_2;
-        }
-        
-        System.out.println("Entre las " + hora_1 + ":00 horas del día " + dia_1 + " y las " + hora_2 + ":00 horas del día " + dia_2 + " han pasado " + horas + " horas");
-    
-        s.close();
+
     }
 }

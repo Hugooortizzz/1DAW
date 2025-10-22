@@ -17,11 +17,11 @@ public class Ejercicio29 {
         System.out.print("Introduzca un segundo número: ");
         numero2 = s.nextInt();
 
-        while (numero1 > 0) {
-            if (numero1 % numero2 != 0){
+        while (numero1 > 0) { //Mientras que el número sea mayor que 0 el bucle continuará, ya que debe pasar por todos los números hasta el 1
+            if (numero1 % numero2 != 0){ //En caso de que el número 1 NO sea divisible entre el número 2, se mostrará por pantalla
                 System.out.println(numero1);
             }
-            numero1--;
+            numero1--; //Y se restará uno por cada repetición del bucle para ir decrementando su valor
         }
 
         s.close();

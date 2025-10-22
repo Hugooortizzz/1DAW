@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Mis Módulos</h1>
     <fieldset>
         <legend>Datos Personales</legend>
         <form>
-            Provincia:<br>
-            <select name="provincias">
-                <option value="almeria">Almeria</option>
-                <option value="sevilla">Sevilla</option>
-                <option value="cordoba">Córdoba</option>
-                <option value="granada">Granada</option>
-                <option value="malaga">Málaga</option>
-                <option value="cadiz">Cádiz</option>
-                <option value="huelva">Huelva</option>
-                <option value="jaen">Jaén</option>
-            </select>
+            <p>
+                Provincia:<br>
+                <select name="provincias">
+                    <option value="almeria">Almeria</option>
+                    <option value="sevilla">Sevilla</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="granada">Granada</option>
+                    <option value="malaga">Málaga</option>
+                    <option value="cadiz">Cádiz</option>
+                    <option value="huelva">Huelva</option>
+                    <option value="jaen">Jaén</option>
+                </select>
+            </p>
+            <p>
+                Fecha Nacimiento:<br>
+                <input type="number" name="dia" max="31" min="1" style="width:30px;"> de
+                <select name="meses">
+                    <option value="enero">Enero</option>
+                    <option value="febrero">Febrero</option>
+                    <option value="marzo">Marzo</option>
+                    <option value="abril">Abril</option>
+                    <option value="mayo">Mayo</option>
+                    <option value="junio">Junio</option>
+                    <option value="julio">Julio</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="septiembre">Septiembre</option>
+                    <option value="octubre">Octubre</option>
+                    <option value="noviembre">Noviembre</option>
+                    <option value="diciembre">Diciembre</option>
+                </select> de
+                <input type="number" name="año" max="2025" min="1900" style="width:50px;">
+            </p>
+
+            <p>
+                Módulos<br>
+                <select name="modulos">
+                    <option value="bd">Bases de Datos</option>
+                    <option value="prog">Programación</option>
+                    <option value="si">Sistemas Informáticos</option>
+                    <option value="lmarc">Lenguajes de Marcas</option>
+                    <option value="ed">Entornos de Desarrollo</option>
+                    <option value="ipe1">IPE1</option>
+                </select>
+            </p>
+
+
         </form>
     </fieldset>
 
 </body>
+
 </html>

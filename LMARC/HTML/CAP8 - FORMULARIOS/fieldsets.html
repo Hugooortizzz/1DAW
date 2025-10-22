@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicio avanzado: Formularios con fieldset </h1>
+
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            Nombre completo* <input type="text" name="nombre" placeholder="Ej: Ana Pérez" required>
+            Correo electrónico* <input type="email" name="correo" placeholder="ejemplo@dominio.com" required>
+            Contraseña* <input type="password" name="contraseña" minlength="8" placeholder="8+ caracteres">
+            Edad <input type="number" name="edad" min="1" max="99" placeholder="Ej: 30"><br>
+            Biografía (opcional) <textarea name="biografia" placeholder="Cuéntanos algo sobre ti..."></textarea>
+    </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferencias avanzadas</legend>
+        Color favorito<input type="color" name="colorfavorito" value="#0055ff">
+        Recibir notificaciones
+        <select name="notificaciones">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="quizas">Quizás</option>
+        </select>
+        Subir avatar<input type="file" name="avatar">
+        Nivel de privacidad<input type="range"><br>
+        Notas extra<textarea name="notasextra" placeholder="Opcional"></textarea>
+    </fieldset>
+    </form>
+</body>
+
+</html>

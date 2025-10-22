@@ -24,7 +24,8 @@ public class Ejercicio32 {
     numero = s.nextInt();
     contar_cifras = numero;
 
-    while (contar_cifras > 0){
+    //El procedimiento para identificar los digitos es el mismo que he usado en ejercicios anteriores, primero cuento las cifras
+    while (contar_cifras > 0){ 
         contar_cifras = contar_cifras / 10;
         cifras++;
     }
@@ -32,10 +33,10 @@ public class Ejercicio32 {
 
     System.out.print("Dígitos pares: ");
     for (int i = 1; i <= cifras; i++){
-        digito = (int) ((numero / Math.pow(10,potencia)) % 10);
-        if (digito % 2 == 0){
-        System.out.print(digito + " ");
-        total_pares = total_pares + digito;
+        digito = (int) ((numero / Math.pow(10,potencia)) % 10); //Y luego utilizo esta operación matemática para ir identificando los dígitos
+        if (digito % 2 == 0){ //En caso de que el módulo de dividir el dígito entre 2 es igual a 0 (es decir, es par)
+        System.out.print(digito + " "); //Se muestra por pantalla
+        total_pares = total_pares + digito; //Y se suma al total de los pares
         }
         potencia--;
         }
