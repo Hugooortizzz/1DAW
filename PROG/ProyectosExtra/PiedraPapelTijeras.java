@@ -7,10 +7,12 @@ public class PiedraPapelTijeras {
         int maquina;
         int vidas_jugador = 5;
         int vidas_maquina = 5;
+        boolean repetir = true;
+
 
         Scanner s = new Scanner(System.in);
 
-        while ((vidas_jugador > 0) || (vidas_maquina > 0)){
+        while (repetir){
 
             maquina = (int) (Math.random() * 3); //0 = Piedra, 1 = Papel, 2 = Tijeras
             System.out.println("Tus vidas: " + vidas_jugador);
@@ -164,8 +166,13 @@ public class PiedraPapelTijeras {
                 System.out.print("Introduzca un valor válido");
                 break;
             }
-            break;
+            if ((vidas_jugador == 0) || (vidas_maquina == 0)){
+                repetir = false;
+            }
+
 
         }
+
+        s.close();
     }
 }
