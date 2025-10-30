@@ -321,7 +321,7 @@ public class Ruleta {
                                 System.out.println("El número " + numero + " es " + color + ",  por lo que has ganado la apuesta.");
                                 System.out.println("Has ganado " + d_apuesta + " * 2 = " + (d_apuesta * 2));
                                 saldo += d_apuesta * 2;
-                                System.out.print("Saldo actual: " + saldo);
+                                System.out.println("Saldo actual: " + saldo);
                             } else {
                                 System.out.println("Ha salido el número " + numero);
                                 System.out.println("El número " + numero + " es " + color + ", por lo que has perdido la apuesta.");
