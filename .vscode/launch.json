@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PiramideNevada",
+            "request": "launch",
+            "mainClass": "PiramideNevada",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
             "name": "Ruleta",
             "request": "launch",
             "mainClass": "Ruleta",
