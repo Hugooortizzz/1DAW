@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ejercicio16",
+            "request": "launch",
+            "mainClass": "Tema6.Ejercicio16",
+            "projectName": "1DAW_fb8aa9f5"
+        },
+        {
+            "type": "java",
             "name": "PiramideNevada",
             "request": "launch",
             "mainClass": "PiramideNevada",
