@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pedirnotas",
+            "request": "launch",
+            "mainClass": "Tema7.pedirnotas",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "prueba",
+            "request": "launch",
+            "mainClass": "Tema7.prueba",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio16",
+            "request": "launch",
+            "mainClass": "Tema6.Ejercicio16",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
             "name": "Ejercicio16",
             "request": "launch",
             "mainClass": "Tema6.Ejercicio16",

@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+}
+
+
+#cabecera {
+    padding: 1em;
+    border: 1px;
+    border-style: solid;
+    margin: 0px;
+    padding: 0px;
+    height: 40px
+}
+
+#buscador{
+    margin-left: 86.3%;
+    margin-top: -2%;
+}
+
+#menu{
+    padding: .5em;
+    margin-bottom: .5em;
+    border: 1px;
+    border-style: solid;
+}
+
+#menu li{
+    display: inline;
+    margin: -2px;
+}
+
+#menu ul{
+    margin-left: -48px;
+}
+
+#lateral{
+    width: 10%;
+    height: 750px;
+    border: 1px;
+    border-style: solid;
+}
