@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ejercicio8",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio8",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio7",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio6",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio6",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio5",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio5",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio4",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio4",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio3",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio2",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1",
+            "request": "launch",
+            "mainClass": "Tema7.Ejercicio1",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
             "name": "pedirnotas",
             "request": "launch",
             "mainClass": "Tema7.pedirnotas",

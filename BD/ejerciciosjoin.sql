@@ -79,7 +79,7 @@ WHERE producto is NULL;
 /* 8.- Mostrar pedidos sin usuario asociado (RIGHT JOIN con filtro)
 Encuentra los pedidos que no tienen un usuario asociado (si existiera algún error en la base de datos).*/
 SELECT usuarios.nombre, pedidos.producto FROM usuarios
-LEFT JOIN pedidos 
+RIGHT JOIN pedidos 
 ON usuarios.usuario_id = pedidos.usuario_id
 WHERE usuarios.nombre is NULL;
 
