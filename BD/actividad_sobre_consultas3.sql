@@ -184,7 +184,7 @@ ON Products.ProductID = OrderDetails.ProductID;
 
 /* 3. Mostrar todas las órdenes y los productos asociados, si los hay. */
 SELECT OrderDetails.OrderDetailID, Products.ProductName FROM OrderDetails
-INNER JOIN Products
+LEFT JOIN Products
 ON OrderDetails.ProductID = Products.ProductID;
 
 /* 4. Contar cuántos productos hay por categoría. */
@@ -227,13 +227,13 @@ HAVING ProcessedOrders > 10;
 
 /* 10. Mostrar el nombre de los proveedores y los productos que suministran. */
 SELECT Suppliers.SupplierName, Products.ProductName FROM Suppliers
-INNER JOIN Products
+LEFT JOIN Products
 ON Suppliers.SupplierID = Products.SupplierID;
 
 /* 11. Mostrar todos los productos y el proveedor, si lo tienen. */
 SELECT Products.ProductName, Suppliers.SupplierName FROM Products
 LEFT JOIN Suppliers
-ON Products.ProductID = Suppliers.SupplierID;
+ON Products.SupplierID = Suppliers.SupplierID;
 
 /* 12. Mostrar el total de productos suministrados por cada proveedor. */
 SELECT Suppliers.SupplierName, COUNT(Products.SupplierID) AS Supplied_Products FROM Suppliers
@@ -254,9 +254,10 @@ LEFT JOIN Customers
 ON Orders.CustomerID = Customers.CustomerID;
 
 /* 15. Mostrar los productos que han sido ordenados y las cantidades en cada orden. */
-SELECT Products.ProductName, OrderDetails.Quantity FROM Products
+SELECT Products.ProductName, SUM(OrderDetails.Quantity) AS QuantityOrdered FROM Products
 INNER JOIN OrderDetails
-ON Products.ProductID = OrderDetails.ProductID;
+ON Products.ProductID = OrderDetails.ProductID
+GROUP BY (OrderDetails.OrderID);
 
 /*  16. Mostrar todos los empleados y las órdenes que han procesado, si las hay. */
 SELECT Employees.FirstName, Orders.OrderID FROM Employees
@@ -271,9 +272,46 @@ GROUP BY (Orders.CustomerID);
 
 /* 18. Mostrar los clientes que han hecho más de 5 órdenes. */
 SELECT Customers.CustomerName, COUNT(Orders.CustomerID) AS Customer_Orders FROM Customers
-LEFT JOIN Orders
+INNER JOIN Orders
 ON Customers.CustomerID = Orders.CustomerID
 GROUP BY (Orders.CustomerID)
 HAVING Customer_Orders > 5;
 
 /* 19. Mostrar los nombres de los empleados y los nombres de los clientes a los que han atendido. */
+SELECT Employees.FirstName, Customers.CustomerName FROM Orders
+LEFT JOIN Employees
+ON Orders.EmployeeID = Employees.EmployeeID
+LEFT JOIN Customers
+ON Orders.CustomerID = Customers.CustomerID;
+
+/* 20. Mostrar todos los productos y sus respectivas categorías, si existen. */
+SELECT Products.ProductName, Categories.CategoryName FROM Products
+LEFT JOIN Categories
+ON Products.CategoryID = Categories.CategoryID;
+
+/* 21. Mostrar cuántos productos hay por cada proveedor. */
+SELECT Suppliers.SupplierName, COUNT(Products.SupplierID) AS Products_Supplied FROM Suppliers
+LEFT JOIN Products
+ON Suppliers.SupplierID = Products.SupplierID
+GROUP BY (Products.SupplierID);
+
+/* 22. Mostrar los proveedores que suministran más de 15 productos. */
+SELECT Suppliers.SupplierName, COUNT(Products.SupplierID) AS Products_Supplied FROM Suppliers
+INNER JOIN Products
+ON Suppliers.SupplierID = Products.SupplierID
+GROUP BY (Products.SupplierID)
+HAVING Products_Supplied > 15;
+
+/* 23. Crear una vista que muestre el total de órdenes por cliente. */
+CREATE VIEW OrdersPerClient AS
+SELECT Customers.CustomerName, COUNT(Orders.CustomerID) AS Client_Orders FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID
+GROUP BY (Orders.CustomerID);
+
+/* 24. Crear una vista que muestre los empleados y el total de órdenes que han procesado. */
+CREATE VIEW EmployeesTotalOrders AS
+SELECT Employees.FirstName, COUNT(Orders.EmployeeID) AS ProcessedOrders FROM Employees
+LEFT JOIN Orders
+ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY (Orders.EmployeeID);

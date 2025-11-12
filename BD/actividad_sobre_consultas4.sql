@@ -1,0 +1,50 @@
+/* Usando la BD www(yo la he nombrado CONSULTAS3) realiza los siguientes apartados (recuerda que se dispone de las siguientes tablas:  
+Categories,Customers,Employees, OrderDetails, Orders, Products, Shippers y Suppliers) */
+USE CONSULTAS3;
+
+/* 1. Listar todos los nombres de producto y su proveedor */
+SELECT Products.ProductName, Suppliers.SupplierName FROM Products
+LEFT JOIN Suppliers
+ON Products.SupplierID = Suppliers.SupplierID;
+
+/* 2.- Nombre completo de empleados y número total de órdenes gestionadas. Usar CONCAT para concatenar nombre y apellidos. */
+SELECT CONCAT(Employees.FirstName, " ", Employees.LastName) AS EmployeeFullName, COUNT(Orders.EmployeeID) AS Orders FROM Employees
+LEFT JOIN Orders
+ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY (Orders.EmployeeID);
+
+/* 3. Nombres clientes y total de pedidos realizados */
+SELECT Customers.CustomerName, COUNT(Orders.CustomerID) AS Orders FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID
+GROUP BY (Orders.CustomerID);
+
+/* 4.- Detalles de pedidos (identificador pedido, nombre de producto, cantidad y precio) */
+SELECT OrderDetails.OrderID, Products.ProductName, OrderDetails.Quantity, Products.Price * OrderDetails.Quantity AS TotalPrice FROM OrderDetails
+LEFT JOIN Products
+ON OrderDetails.ProductID = Products.ProductID;
+
+/* 5. Pedidos con total mayor a 500 */
+SELECT OrderDetails.OrderID, Products.ProductName, OrderDetails.Quantity, Products.Price * OrderDetails.Quantity AS TotalPrice FROM OrderDetails
+LEFT JOIN Products
+ON OrderDetails.ProductID = Products.ProductID
+HAVING TotalPrice > 500;
+
+/* 6. Compañía de envío y cantidad de pedidos */
+SELECT Shippers.ShipperName, COUNT(Orders.ShipperID) AS Shippings FROM Shippers
+LEFT JOIN Orders
+ON Shippers.ShipperID = Orders.ShipperID
+GROUP BY (Orders.ShipperID);
+
+/* 7. Listar clientes y su total gastado */
+SELECT Customers.CustomerName, SUM(OrderDetails.Quantity * Products.Price) AS TotalSpent FROM Orders
+RIGHT JOIN Customers
+ON Orders.CustomerID = Customers.CustomerID
+LEFT JOIN OrderDetails
+ON Orders  erID = OrderDetails.OrderID
+LEFT JOIN Products
+ON OrderDetails.ProductID = Products.ProductID
+GROUP BY (OrderDetails.OrderID);
+
+/* 8. Productos y cantidad total vendida */
+SELECT Products.ProductName, 
