@@ -22,6 +22,10 @@ a em{
     color: blue;
 }
 
+.especial {
+    color: purple;
+}
+
 caption {
     color: blue;
 }
@@ -45,10 +49,34 @@ thead{
 }
 
 
-tbody tr > th{
+tbody tr > th, tfoot{
     color: red;
 }
 
-tbody > tr th{
+th.especial{
     color: orange;
+}
+
+td {
+    color: green;
+}
+
+td strong{
+    color: orange;
+}
+
+tfoot{
+    color: red;
+}
+
+#adicional p{
+    color: olive;
+}
+
+#adicional #especial{
+    color: fuchsia;
+}
+
+div a {
+    color: green;
 }
