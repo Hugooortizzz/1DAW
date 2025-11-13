@@ -41,10 +41,54 @@ SELECT Customers.CustomerName, SUM(OrderDetails.Quantity * Products.Price) AS To
 RIGHT JOIN Customers
 ON Orders.CustomerID = Customers.CustomerID
 LEFT JOIN OrderDetails
-ON Orders  erID = OrderDetails.OrderID
+ON Orders.OrderID = OrderDetails.OrderID
 LEFT JOIN Products
 ON OrderDetails.ProductID = Products.ProductID
 GROUP BY (OrderDetails.OrderID);
 
 /* 8. Productos y cantidad total vendida */
-SELECT Products.ProductName, 
+SELECT Products.ProductName, SUM(OrderDetails.Quantity) AS Product_Quantity_Sold FROM Products
+LEFT JOIN OrderDetails
+ON Products.ProductID = OrderDetails.ProductID
+GROUP BY (OrderDetails.ProductID);
+
+/* 9. Listado de clientes sin pedidos el último año (1998) */
+SELECT Customers.CustomerName, YEAR(Orders.OrderDate) AS Order_Year FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID
+GROUP BY Customers.CustomerID
+HAVING Order_Year < 2025;
+
+/* 10. Categorías y total de productos vendidos */
+SELECT Categories.CategoryName, SUM(OrderDetails.Quantity) AS Category_Quantity_Sold FROM Products
+LEFT JOIN Categories
+ON Products.CategoryID = Categories.CategoryID
+LEFT JOIN OrderDetails
+ON Products.ProductID = OrderDetails.ProductID
+GROUP BY (OrderDetails.ProductID);
+
+/* 11. Empleados y clientes más frecuentes */
+SELECT Employees.FirstName, COUNT(Orders.EmployeeID) AS Employee_Frequency FROM Employees
+LEFT JOIN Orders
+ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY (Orders.EmployeeID)
+ORDER BY Employee_Frequency;
+
+SELECT Customers.CustomerName, COUNT(Orders.CustomerID) AS Customer_Frequency FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID
+GROUP BY (Orders.CustomerID)
+ORDER BY Customer_Frequency;
+
+/* 12. Productos no vendidos */
+SELECT Products.ProductName FROM Products
+LEFT JOIN OrderDetails
+ON Products.ProductID = OrderDetails.ProductID
+HAVING COUNT(OrderDetails.ProductID) < 1;
+
+/* 13. Compañía de envío y pedidos de un año determinado (busca tú mismo
+un año donde se hayan podido producir envíos) */
+SELECT YEAR(Orders.OrderDate) AS DateYear, Shippers.ShipperName FROM Orders
+LEFT JOIN Shippers
+ON Shippers.ShipperID = Orders.ShipperID
+HAVING DateYear = 2025;
