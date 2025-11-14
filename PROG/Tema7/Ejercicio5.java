@@ -2,15 +2,14 @@
 los números introducidos junto con las palabras “máximo” y “mínimo” al lado
 del máximo y del mínimo respectivamente. */
 
-package Tema7;
 
 import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
         int[] numero = new int[10];
-        int maximo = 0;
-        int minimo = Integer.MAX_VALUE;
+        int maximo = numero[0];
+        int minimo = numero[0];
         
         Scanner s = new Scanner(System.in);
 

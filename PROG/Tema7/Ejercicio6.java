@@ -4,7 +4,6 @@ debe pasar a la posición 1, el de la 1 a la 2, etc. El número que se encuentra
 la última posición debe pasar a la posición 0. Finalmente, muestra el contenido
 del array. */
 
-package Tema7;
 
 import java.util.Scanner;
 

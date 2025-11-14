@@ -19,7 +19,7 @@ public class Ejercicio10 {
         Random r = new Random();
 
         for (int i = 0; i<numero.length; i++){
-            numero_aleatorio = r.nextInt(100);
+            numero_aleatorio = r.nextInt(101);
             
             if (numero_aleatorio % 2 == 0){
                 numero[contador_positivo] = numero_aleatorio;

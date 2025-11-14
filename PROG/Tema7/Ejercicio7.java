@@ -4,7 +4,6 @@ por teclado dos valores y a continuación cambiará todas las ocurrencias del
 primer valor por el segundo en la lista generada anteriormente. Los números
 que se han cambiado deben aparecer entrecomillados. */
 
-package Tema7;
 
 import java.util.Random;
 import java.util.Scanner;

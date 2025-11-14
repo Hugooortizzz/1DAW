@@ -52,7 +52,7 @@ LEFT JOIN OrderDetails
 ON Products.ProductID = OrderDetails.ProductID
 GROUP BY (OrderDetails.ProductID);
 
-/* 9. Listado de clientes sin pedidos el último año (1998) */
+/* 9. Listado de clientes sin pedidos el último año (2025) */
 SELECT Customers.CustomerName, YEAR(Orders.OrderDate) AS Order_Year FROM Customers
 LEFT JOIN Orders
 ON Customers.CustomerID = Orders.CustomerID
