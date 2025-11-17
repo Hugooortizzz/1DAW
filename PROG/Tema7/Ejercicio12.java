@@ -55,7 +55,7 @@ public class Ejercicio12 {
                 }
             }
 
-            while (p_final<0 || p_final>9){
+            while (p_final<0 || p_final>9){ //Cambiar while por do-while
                 System.out.print("Introduzca la posición final (0-9): ");
                 p_final = s.nextInt();
                 if (p_final<0 || p_final>9){
@@ -103,6 +103,6 @@ public class Ejercicio12 {
         }
 
         
-
+        s.close();
     }
 }

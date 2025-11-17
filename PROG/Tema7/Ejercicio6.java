@@ -26,5 +26,7 @@ public class Ejercicio6 {
         for (int j=0; j<numero.length; j++){
             System.out.println("Número " + j + ": " + numero[j]);
         }
+
+        s.close();
     }
 }

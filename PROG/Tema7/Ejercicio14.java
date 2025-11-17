@@ -40,9 +40,7 @@ public class Ejercicio14 {
         }
 
         for (int p=0; p<palabra.length; p++){
-            if (Arrays.asList(colores).contains(palabra[p])){
-            
-            }else{
+            if (!Arrays.asList(colores).contains(palabra[p])){
                 palabra_final[contador] = palabra[p];
                 contador ++;
             }
@@ -51,5 +49,7 @@ public class Ejercicio14 {
         for (int j=0; j<palabra.length; j++){
             System.out.println( j + "\t" + palabra_final[j]);
         }
+
+        s.close();
     }
 }

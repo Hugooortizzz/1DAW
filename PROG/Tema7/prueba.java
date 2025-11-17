@@ -1,5 +1,3 @@
-package Tema7;
-
 public class prueba {
     public static void main(String[] args) {
         int [4] notas = {3, 7, 4, 8};

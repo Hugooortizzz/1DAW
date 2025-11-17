@@ -36,5 +36,7 @@ public class Ejercicio7 {
             }
             System.out.print(" ");
         }
+
+        s.close();
     }
 }

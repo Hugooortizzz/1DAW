@@ -37,5 +37,7 @@ public class Ejercicio5 {
 
             System.out.print("\n");
         }
+
+        s.close();
     }
 }

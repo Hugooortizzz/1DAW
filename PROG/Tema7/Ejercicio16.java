@@ -48,5 +48,6 @@ public class Ejercicio16 {
             }
         }
         
+        s.close();
     }
 }

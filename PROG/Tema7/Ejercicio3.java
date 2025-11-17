@@ -2,8 +2,6 @@
 en orden inverso, es decir, el primero que se introduce es el último en
 mostrarse y viceversa. */
 
-package Tema7;
-
 import java.util.Scanner;
 
 public class Ejercicio3 {
@@ -20,6 +18,7 @@ public class Ejercicio3 {
         for (int j=numero.length-1; j>0; j--){
             System.out.println(numero[j]);
         }
+
+        s.close();
     }
-    
 }

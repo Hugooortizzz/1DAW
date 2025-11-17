@@ -98,5 +98,7 @@ public class Ejercicio8 {
                 System.out.print(" " + temperatura[j]);
                 System.out.print("\n");
             }
+
+        s.close();
     }
 }

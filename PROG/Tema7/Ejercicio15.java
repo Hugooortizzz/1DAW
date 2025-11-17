@@ -7,7 +7,7 @@ public class Ejercicio15 {
         int grupo = 0;
         int contador;
         boolean disponible = false;
-        boolean espacio_restaurante = true;
+        boolean sitio_restaurante;
 
         Scanner s = new Scanner(System.in);
 
@@ -79,6 +79,8 @@ public class Ejercicio15 {
 
         
         }
+
+        s.close();
     }
     
 }

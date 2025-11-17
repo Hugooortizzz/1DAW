@@ -62,6 +62,6 @@ public class Ejercicio13 {
             }
         }
         
-        
+        s.close();
     }
 }

@@ -22,6 +22,6 @@ public class Ejercicio9 {
             System.out.println("Número " + (j+1) + ": " + numero[j] + " " + par_impar[j]); 
         }
 
-
+        s.close();
     }
 }
