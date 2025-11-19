@@ -1,0 +1,42 @@
+*{
+    margin:1px;
+}
+
+nav{
+    background-color: #3aaf60;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    align-content: center;
+    text-align: center;
+}
+
+main{
+    height: 300px;
+    border: 1px black solid;
+}
+
+
+#primera{
+    height:150px;
+    background-color: #ed3b3e;
+}
+
+#segunda{
+    width: 49.899%;
+    height:150px;
+    float: left;
+    background-color: #fe9646;
+}
+
+#tercera{
+    width: 49.89%;
+    height: 150px;
+    float: right;
+    background-color: #f39cad
+}
+
+footer{
+    background-color: #018ef6;
+}
+
