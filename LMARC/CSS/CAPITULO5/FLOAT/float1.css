@@ -3,40 +3,71 @@
 }
 
 nav{
+    margin: .25em;
     background-color: #3aaf60;
-    height: 50px;
+    height: 2em;
     color: white;
-    font-size: 30px;
+    font-size: 2em;
     align-content: center;
     text-align: center;
+    border-radius: 9px;
 }
 
 main{
-    height: 300px;
-    border: 1px black solid;
+    margin: .5em;
+    padding: .5em;
+    height: 20em;
+    border: 2px black solid;
+    border-radius: 9px;
 }
 
 
 #primera{
-    height:150px;
+    height: 5em;
     background-color: #ed3b3e;
+    color: white;
+    font-size: 2em;
+    align-content: center;
+    text-align: center;
+    margin: 0px;
+    border-radius: 9px;
 }
 
 #segunda{
-    width: 49.899%;
-    height:150px;
+    margin: 0px;
+    width: 29.37em;
+    height:5em;
     float: left;
     background-color: #fe9646;
+    color: white;
+    font-size: 2em;
+    align-content: center;
+    text-align: center;
+    border-radius: 9px;
 }
 
 #tercera{
-    width: 49.89%;
-    height: 150px;
+    margin: 0px;
+    width: 29.37em;
+    height: 5em;
     float: right;
-    background-color: #f39cad
+    background-color: #f39cad;
+    color: white;
+    font-size: 2em;
+    align-content: center;
+    text-align: center;
+    border-radius: 9px;
+    
 }
 
 footer{
     background-color: #018ef6;
+    height: 2em;
+    color: white;
+    font-size: 2em;
+    align-content: center;
+    text-align: center;
+    margin: .25em;
+    border-radius: 9px;
 }
 
