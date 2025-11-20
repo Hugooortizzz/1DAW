@@ -1,5 +1,3 @@
-CREATE DATABASE IF NOT EXISTS CONSULTAS3;
-
 USE CONSULTAS3;
 
 CREATE TABLE IF NOT EXISTS Suppliers(
@@ -9,7 +7,96 @@ CREATE TABLE IF NOT EXISTS Suppliers(
     Address VARCHAR(120),
     City VARCHAR(120),
     PostalCode VARCHAR(10),
+    Country VARCHAR(50),USE CONSULTAS3;
+
+CREATE TABLE IF NOT EXISTS Suppliers(
+    SupplierID INT AUTO_INCREMENT PRIMARY KEY,
+    SupplierName VARCHAR(40),
+    ContactName VARCHAR(80),
+    Address VARCHAR(120),
+    City VARCHAR(120),
+    PostalCode VARCHAR(10),
     Country VARCHAR(50),
+    Phone VARCHAR(20)
+);
+
+CREATE TABLE IF NOT EXISTS Categories(
+    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
+    CategoryName VARCHAR(50),
+    Description VARCHAR(120)
+);
+
+CREATE TABLE IF NOT EXISTS Shippers(
+    ShipperID INT AUTO_INCREMENT PRIMARY KEY,
+    ShipperName VARCHAR(80),
+    Phone VARCHAR(20)
+);
+
+CREATE TABLE IF NOT EXISTS Customers(
+    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerName VARCHAR(80),
+    ContactName VARCHAR(80),
+    Address VARCHAR(120),
+    City VARCHAR(60),
+    PostalCode VARCHAR(10),
+    Country VARCHAR(20)
+);
+
+CREATE TABLE IF NOT EXISTS Employees(
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    LastName VARCHAR(120),
+    FirstName VARCHAR(80),
+    BirthDate DATE,
+    Photo VARCHAR(120),
+    Notes VARCHAR(300)
+);
+
+
+CREATE TABLE IF NOT EXISTS Orders(
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    EmployeeID INT,
+    OrderDate DATE,
+    ShipperID INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+    FOREIGN KEY (ShipperID) REFERENCES Shippers(ShipperID)
+);
+
+CREATE TABLE IF NOT EXISTS Products(
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    ProductName VARCHAR(50),
+    SupplierID INT,
+    CategoryID INT,
+    Unit VARCHAR(50),
+    Price DECIMAL(10,2),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
+);
+
+CREATE TABLE IF NOT EXISTS OrderDetails(
+    OrderDetailID INT AUTO_INCREMENT PRIMARY KEY,
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- Shippers
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (1,'Shipper 1','+34 600 000 001');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (2,'Shipper 2','+34 600 000 002');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (3,'Shipper 3','+34 600 000 003');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (4,'Shipper 4','+34 600 000 004');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (5,'Shipper 5','+34 600 000 005');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (6,'Shipper 6','+34 600 000 006');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (7,'Shipper 7','+34 600 000 007');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (8,'Shipper 8','+34 600 000 008');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (9,'Shipper 9','+34 600 000 009');
+INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (10,'Shipper 10','+34 600 000 010');
+
+-- Customers
+INSERT INTO Customers (CustomerID,C
     Phone VARCHAR(20)
 );
 

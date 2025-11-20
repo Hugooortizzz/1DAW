@@ -33,9 +33,10 @@ main{
     border-radius: 9px;
 }
 
+
 #segunda{
     margin: 0px;
-    width: 29.37em;
+    width: 50%;
     height:5em;
     float: left;
     background-color: #fe9646;
@@ -48,7 +49,7 @@ main{
 
 #tercera{
     margin: 0px;
-    width: 29.37em;
+    width: 50%;
     height: 5em;
     float: right;
     background-color: #f39cad;

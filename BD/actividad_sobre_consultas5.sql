@@ -33,3 +33,8 @@ ON Categories.CategoryID = Products.CategoryID
 GROUP BY (Products.ProductID);
 
 /*  5. Listar el nombre de los 5 primeros productos ordenados alfabéticamente sin admitir duplicados*/
+SELECT ProductName FROM Products
+ORDER BY ProductName LIMIT 5;
+
+/* 6. Contabilizar los clientes de cada ciudad. Las ciudades deben empezar por la letra L */
+SELECT COUNT(City) AS CityCount
