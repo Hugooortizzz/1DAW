@@ -73,8 +73,7 @@ public class Ejercicio11 {
                 for (int q=n; q>contador; q--){
                     numero[q] = numero[q-1];
                 }
-                numero[contador] = n_primo;
-                contador++;
+                numero[contador++] = n_primo;
 
             }
         }

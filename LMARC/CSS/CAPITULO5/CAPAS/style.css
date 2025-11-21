@@ -5,32 +5,32 @@ div{
 
 #capa_1 { 
     z-index: 1;
-    top: 50%;
-    left: 15%; 
+    top: 310px;
+    left: 250px; 
 }
 
 #capa_2 { 
     z-index: 2;
-    top: 27%;
-    left: 22%; 
+    top: 180px;
+    left: 325px; 
 }
 
 #capa_3 { 
     z-index: 3;
-    top: 47%;
-    left: 35%;
+    top: 300px;
+    left: 500px;
 }
 
 #capa_4 { 
     z-index: 4;
-    top: 0%;
-    left: 40%
+    top: 10px;
+    left: 550px;
 }
 
 #ace_of_diamonds { 
     z-index: 5; 
-    top: 60%; 
-    left: 45%;
+    top: 400px; 
+    left: 620px;
 }
 
 
