@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TorreAjedrez2",
+            "request": "launch",
+            "mainClass": "TorreAjedrez2",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
+            "name": "TorreAjedrez",
+            "request": "launch",
+            "mainClass": "TorreAjedrez",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
             "name": "Ejercicio3",
             "request": "launch",
             "mainClass": "Ejercicio3",
