@@ -15,7 +15,7 @@ PRIMARY KEY(CustomerID)
 /* Importando el CSV (Suponemos que ya se ha habilitado la importación en mysql) */
 USE CONSULTAS;
 
-LOAD DATA LOCAL INFILE "/home/hugom/Downloads/customers.csv"
+LOAD DATA LOCAL INFILE "/home/hugo/Downloads/customers.csv"
 
 INTO TABLE Customers
 

@@ -9,7 +9,7 @@ INNER JOIN Customers
 ON Orders.CustomerID = Customers.CustomerID
 INNER JOIN Shippers
 ON Orders.ShipperID = Shippers.ShipperID
-WHERE Customers.CustomerNAme = "Cliente 3 S.L.";
+WHERE Customers.CustomerName = "Cliente 3 S.L.";
 
 /* 2. Lista todos los detalles de pedidos con su nombre de producto, su identificador de detalle de pedido y quién  lo ha suministrado (Suppliers) */
 SELECT OrderDetails.OrderDetailID, Suppliers.SupplierName, Products.ProductName,  FROM OrderDetails

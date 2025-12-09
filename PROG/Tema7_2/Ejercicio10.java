@@ -74,7 +74,11 @@ public class Ejercicio10 {
             
             System.out.println();
 
+            
+
         }
+
+        for (int)
         
 
         System.out.print("Movimiento del jugador 2 (X): (Ej 31 (fila 3 columna 1)): ");
