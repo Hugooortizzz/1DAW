@@ -9,6 +9,13 @@
             "name": "TorreAjedrez2",
             "request": "launch",
             "mainClass": "TorreAjedrez2",
+            "projectName": "1DAW_10fb6f59"
+        },
+        {
+            "type": "java",
+            "name": "TorreAjedrez2",
+            "request": "launch",
+            "mainClass": "TorreAjedrez2",
             "projectName": "1DAW_8c40cc42"
         },
         {

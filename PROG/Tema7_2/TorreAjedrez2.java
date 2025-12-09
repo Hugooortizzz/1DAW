@@ -41,10 +41,19 @@ public class TorreAjedrez2 {
         }
 
         for (int i=0; i<n_obstaculos; i++){
-            System.out.print("Introduzca la columna del obstáculo " + (i + 1) + " (a-h):");
-            obstaculocol = s.next().charAt(0);
-            System.out.print("Introduzca la fila del obstáculo " + (i + 1) + " (1-8):");
-            obstaculofil = s.nextInt();
+            do{
+                do{
+                    System.out.print("Introduzca la columna del obstáculo " + (i + 1) + " (a-h):");
+                    obstaculocol = s.next().charAt(0);
+                }while(obstaculocol < 97 && obstaculocol > 104);
+            
+                do{
+                    System.out.print("Introduzca la fila del obstáculo " + (i + 1) + " (1-8):");
+                    obstaculofil = s.nextInt();
+                }while(obstaculofil < 1 && obstaculofil > 8);
+            }while((int) obstaculocol - 97 != (int) columna - 97 && 8 - obstaculofil != 8 - fila);
+            
+            
 
             cuadrante[8-obstaculofil][(int) obstaculocol - 97] = OBSTACULO;
         }
@@ -54,19 +63,28 @@ public class TorreAjedrez2 {
                 if (cuadrante[i][j] == OBSTACULO){
                     if (i > 8-fila){
                         for (int k = i+1; k<cuadrante[i].length; k++){
-                            cuadrante[k][(int) columna - 97] = VACIO;
+                            if (cuadrante[k][(int) columna - 97] != OBSTACULO){
+                                cuadrante[k][(int) columna - 97] = VACIO;
+                            }
                         }
                     } else if (i < 8-fila){
                         for (int k = i-1; k>=0; k--){
-                            cuadrante[k][(int) columna - 97] = VACIO;
+                            if (cuadrante[k][(int) columna - 97] != OBSTACULO){
+                                cuadrante[k][(int) columna - 97] = VACIO;
+                            }
                         }
                     } else if (j < (int) columna - 97){
                         for (int k = j-1; k>=0; k--){
-                            cuadrante[8-fila][k] = VACIO;
+                            if (cuadrante[8-fila][k]!= OBSTACULO){
+                                cuadrante[8-fila][k] = VACIO;
+                            }
+                            
                         }
                     } else if (j > (int) columna - 97){
                         for (int k = j+1; k<cuadrante[j].length; k++){
-                            cuadrante[8-fila][k] = VACIO;
+                            if (cuadrante[8-fila][k]!= OBSTACULO){
+                                cuadrante[8-fila][k] = VACIO;
+                            }
                         }
                     }
                 }
