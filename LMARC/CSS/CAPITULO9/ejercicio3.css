@@ -1,0 +1,52 @@
+
+ul{
+    font-size: 2em;
+    width: 15em;
+    list-style-image: url(img/flecha_inactiva.png);
+    list-style-position: inside;
+    border-collapse: collapse;
+    visibility: hidden;
+}
+
+ul li{
+    padding-left: .5em;
+    width: 100%;
+    border: 1px solid black;
+    border-bottom: 0px;
+    background-color: rgb(240, 240, 240);
+}
+
+#lista1{
+    visibility: initial;
+    border-bottom: 1px solid black;
+}
+
+ul:hover > #lista1{
+    border-bottom: 0px
+}
+
+ul:hover {
+    visibility: initial;
+}
+
+
+#lista6{
+    border-bottom: 1px solid black;
+}
+
+ul li:hover{
+    list-style-image: url(img/flecha_activa.png);
+    background-color: rgb(205, 205, 205);
+}
+
+#sublista{
+    display: none;
+    float: right;
+}
+
+#equipos:hover > #sublista{
+    display: block;
+}
+
+
+

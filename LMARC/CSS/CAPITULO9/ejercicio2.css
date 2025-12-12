@@ -1,0 +1,19 @@
+ul{
+    font-size: 2em;
+    }
+
+ul li{
+    width: 5em;
+    display: inline-block;
+    padding: .5em;
+    border: 1px solid black;
+    background-color: rgb(240, 240, 240);
+    list-style-image: url(img/flecha_inactiva.png);
+
+}
+
+
+ul li:hover{
+    list-style-image: url(img/flecha_activa.png);
+    background-color: rgb(205, 205, 205);
+}
