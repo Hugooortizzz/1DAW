@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Proyecto",
+            "request": "launch",
+            "mainClass": "Proyecto",
+            "projectName": "1DAW_8c40cc42"
+        },
+        {
+            "type": "java",
             "name": "TorreAjedrez2",
             "request": "launch",
             "mainClass": "TorreAjedrez2",
