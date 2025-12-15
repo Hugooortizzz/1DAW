@@ -58,10 +58,9 @@ public class PruebaTarde2 {
                 for (int i = 0; i < tablero.length; i++) {
                     for (int j = 0; j < tablero[i].length; j++) {
                         if (i == filapieza || j == colpieza) {
-                            if (tablero[i][j] != 'P') {
+                            if (tablero[i][j] != 'P' && tablero[i][j] != 'E') {
                                 tablero[i][j] = '*';
                             }
-
                         }
                     }
                 }
@@ -125,6 +124,8 @@ public class PruebaTarde2 {
                                         }
                                     }
                                 }
+
+                                tablero[i][j] = '*';
                             }
                             
                         }
@@ -135,7 +136,65 @@ public class PruebaTarde2 {
 
                 tablero[filapieza][colpieza] = pieza;
                 break;
+
+                case 'A':
+                case 'a':
+
+                    for (int i=0; i<tablero.length; i++){
+                        for (int j=0; j<tablero[i].length; j++){
+                            if (Math.abs(i-filapieza) <= 1 && Math.abs(j-colpieza) <= 1){
+                                tablero[i][j] = '*';
+                            }
+                        }
+                    }
+
+                    for (int i=0; i<tablero.length; i++){
+                        for (int j=0; j<tablero[i].length; j++){
+                            if (Math.abs(i-filapieza) == Math.abs(j-colpieza)){
+                                if (tablero[i][j] != 'P' && tablero[i][j] != 'E'){
+                                    tablero[i][j] = '*';
+                                }
+                            }
+                        
+                        }
+                    }
+
+                    for (int i=0; i<tablero.length; i++){
+                        for (int j=0; j<tablero[i].length; j++){
+                            if (tablero[i][j] == 'P') {
+                                if (i > filapieza && j > colpieza) {
+                                    for (int k = 1; k < tablero[i].length; k++) {
+                                        if (tablero[i+k][j+k] != 'P') {
+                                            tablero[i+k][j+k] = ' ';
+                                        }
+                                    }
+                                } else if (i < filapieza && j < colpieza) {
+                                    for (int k = 1; k >= 0; k--) {
+                                        if (tablero[k][colpieza] != 'P') {
+                                            tablero[k][colpieza] = ' ';
+                                        }
+                                    }
+                                } else if (j < colpieza) {
+                                    for (int k = j - 1; k >= 0; k--) {
+                                        if (tablero[filapieza][k] != 'P') {
+                                            tablero[filapieza][k] = ' ';
+                                        }
+
+                                    }
+                                } else if (j > colpieza) {
+                                    for (int k = j + 1; k < tablero[j].length; k++) {
+                                        if (tablero[filapieza][k] != 'P') {
+                                            tablero[filapieza][k] = ' ';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    break;
+                    
         }
+        
 
         System.out.println("\ta\tb\tc\td\te\tf\tg\th");
         for (int i = 0; i < tablero.length; i++) {
