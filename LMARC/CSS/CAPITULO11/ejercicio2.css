@@ -20,14 +20,19 @@ label{
 }
 
 table td{
-    width: 20em;
+    width: 15em;
+    vertical-align: top;
 }
+ select{
+    width: 100%;
+ }
+
 
 #submit{
     margin-left: 550px;
 }
 
-td:hover{
+tr:hover{
     background-color: #FF9;
 }
 
@@ -37,7 +42,17 @@ input:focus{
     box-shadow: none;
 }
 
+.ayuda{
+    display: none;
+    position: absolute;
+    transform: translate(380px, -50px);
+    width: 20%;
+}
 
+tr:hover  .ayuda{
+    display: block;
+}
 
-
-
+#email{
+    transform: translate(380px, -20px)
+}

@@ -5,27 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="ejercicio.css">
+    <link rel="stylesheet" type="text/css" href="ejercicio2.css">
+
 </head>
 
 <body>
+    <!-- Apartados 3 y 4 -->
     <h1>Formulario de alta</h1>
     <form>
         <table>
             <tr>
+                <td><h2>Nombre y apellidos<h3>*</h3></h2><br></td>
                 <td>
-                    <h2>Nombre y apellidos<h3>*</h3></h2><br>
-                    <input type="text" name="nombre">
+                    
+                    <input type="text" name="nombre"><br>
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="primer_apellido" size="35">
+                    <div class="ayuda">Debemos saber quien eres</div>
+                    <input type="text" name="primer_apellido" size="35"><br>
                     <label for="primer_apellido">Primer apellido</label>
-                    <input type="text" name="segundo_apellido" size="35">
+                    <input type="text" name="segundo_apellido" size="35"><br>
                     <label for="segundo_apellido">Segundo apellido</label>
+                    
                 </td>
+            </tr>
+            <tr>
+                <td><h2>Dirección<h3>*</h3></h2><br></td>
                 <td>
-                    <h2>Dirección<h3>*</h3></h2>
-                    <input type="text" name="direccion" size="47">
+                    
+                    <input type="text" name="direccion" size="46"><br>
                     <label for="direccion">Calle, numero, piso, puerta</label>
+                    <div class="ayuda">El código postal es imprescindible para poder recibir los pedidos</div>
 
                     <table>
                         <tr>
@@ -37,7 +46,7 @@
                             <td><label for="municipio">Municipio</label></td>
                         </tr>
                         <tr>
-                            <td><select id="provincia">
+                            <td><select>
                                     <option value="" selected disabled hidden></option>
                                     <option>Sevilla</option>
                                     <option>Huelva</option>
@@ -47,7 +56,7 @@
                                     <option>Granada</option>
                                     <option>Jaén</option>
                                 </select></td>
-                            <td><select id="pais">
+                            <td><select>
                                     <option value="" selected disabled hidden></option>
                                     <option>España</option>
                                     <option>Marruecos</option>
@@ -65,17 +74,18 @@
                     </table>
                 </td>
             </tr>
-        </table>
-        <table>
-
             <tr>
+                <td><h2>Email</h2><br></td>
                 <td>
-                    <h2>Email</h2><br>
-                    <input type="email" name="email">
+                    <input type="email" name="email" size="46">
+                    <div class="ayuda" id="email">Para poder enviarte correos</div>
                 </td>
+            </tr>
+            <tr>
+                <td><h2>Teléfono <h3>*</h3></h2></td>
                 <td>
-                    <h2>Teléfono <h3>*</h3>
-                    </h2>
+                    
+                    
                     <table>
                         <tr>
                             <td><input type="number" name="fijo"></td>
@@ -86,14 +96,13 @@
                             <td><label for="movil">Móvil</label></td>
                         </tr>
                     </table>
+                    <div class="ayuda">Para poder llamarte</div>
                 </td>
             </tr>
         </table>
         <hr>
         <input type="submit" id="submit" value="Darme de alta --->">
     </form>
-
-    
 </body>
 
 </html>
