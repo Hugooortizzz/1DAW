@@ -1,0 +1,74 @@
+db.peaks.find()
+
+//1.-
+db.peaks.find(
+    {"name": "Kangchenjunga"}
+)
+
+//2.-
+db.peaks.find(
+    {"height":8516}
+)
+
+//3.-
+db.peaks.find(
+    {"ascents.total": 461}
+)
+
+//4.-
+db.peaks.find(
+    {"ascents.total": {$gt: 462}}
+)
+
+//5.-
+db.peaks.find(
+    { $and: [{"height": {$gte: 8500}}, {"height": {$lte: 8600}}]}
+)
+
+//6.-
+db.peaks.find(
+    {$or: [{"height": 8516}, {"height": 8586}]}
+)
+
+//7.-
+db.peaks.find(
+    {"name": {$ne: "Everest"}}
+)
+
+//8.-
+db.peaks.find(
+    {},
+    {"name": 1, "height": 1}
+)
+
+
+//9.-
+db.peaks.find(
+    {},
+    {"_id": 0, "name": 1, "height": 1}
+)
+
+//10.-
+db.peaks.find(
+    {"height": {$gt: 8600}},
+    {"_id":0, "name":1}
+)
+
+//11.-
+db.peaks.find(
+    {},
+    {"_id":0, "name": 1, "height": 1}
+).sort({"height": 1})
+
+//12.-
+db.peaks.find(
+    {"ascents.total": {$gt: 361}},
+).sort({"ascents.total":-1})
+
+//13.-
+db.peaks.find(
+    {},
+    {"_id":0, "name": 1}
+).sort({"name": 1})
+
+//14.- 

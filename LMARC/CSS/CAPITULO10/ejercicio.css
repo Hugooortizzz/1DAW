@@ -1,0 +1,21 @@
+table, tr, td, th{
+    border: 1px solid #333;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial;
+}
+
+th{
+    background-color: #E6F3FF;
+    text-align: left;
+}
+
+#first_row th{
+    background-image: url(img/fondo_gris.gif);
+    text-align: center;
+}
+
+.amarillo td{
+    background-color: #FFFFCC;
+}
+

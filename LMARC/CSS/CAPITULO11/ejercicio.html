@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="ejercicio.css">
+</head>
+<body>
+    <h1>Formulario de alta</h1>
+    <form>
+        <div id="nombre">
+            <legend>Nombre y apellidos *</legend>
+            <input type="text" name="nombre"><br>
+            Nombre<br>
+            <input type="text" name="primer_apellido"><br>
+            Primer apellido<br>
+            <input type="text" name="segundo_apellido"><br>
+            Segundo apellido<br>
+        </div>
+
+
+        <div id="direccion">
+            <legend>Dirección *</legend>
+            <input type="text" name="direccion"><br>
+            Calle, numero, piso, puerta<br>
+            
+            <table>
+                <tr>
+                    <td><input type="number" name="codigo_postal" max="5"></td>
+                    <td><input type="number" name="municipio"></td>
+                </tr>
+                <tr>
+                    <td>Código postal</td>
+                    <td>Municipio</td>
+                </tr>
+                <tr>
+                    <td><select>
+                        <option>Sevilla</option>
+                        <option>Huelva</option>
+                        <option>Cádiz</option>
+                        <option>Málaga</option>
+                        <option>Almería</option>
+                        <option>Granada</option>
+                        <option>Jaén</option>
+                    </select></td>
+                    <td><select>
+                        <option>España</option>
+                        <option>Marruecos</option>
+                        <option>Portugal</option>
+                        <option>Francia</option>
+                        <option>Japón</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Provincia</td>
+                    <td>País</td>
+                </tr>
+            </table>
+        </div>
+            
+    </form>
+</body>
+</html>

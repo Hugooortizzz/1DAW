@@ -1,0 +1,3 @@
+db.peaks.find(
+    { $and: [{"height": {$gte: 8500}}, {"height": {$lte: 8600}}]}
+)
