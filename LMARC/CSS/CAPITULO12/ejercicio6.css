@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    flex: 1 100%;
+    background-color: #ff5f41;
+}
+
+#first{
+    background-color: #fed41c;
+    flex: 3 30%;
+}
+
+article{
+    background-color: #01bffd;
+    flex: 3 30%;
+    padding: 1em;
+}
+
+#second{
+    background-color: #ff68b1;
+    flex: 3 30%;
+}
+
+footer{
+    flex: 1 100%;
+    background-color: #86eb97;
+}

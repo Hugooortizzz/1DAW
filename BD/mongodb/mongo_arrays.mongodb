@@ -1,0 +1,67 @@
+use students;
+
+
+
+[
+    { "Name": "David", "Subjects": ["MySQL", "MongoDB"], "Marks": [78, 90, 85], "Age": 21 },
+    { "Name": "Elena", "Subjects": ["Python", "MongoDB", "React"], "Marks": [92, 88, 95], "Age": 23 },
+    { "Name": "Lucas", "Subjects": ["MySQL", "Java"], "Marks": [60, 75], "Age": 19 },
+    { "Name": "Sofia", "Subjects": ["Python", "MySQL", "Node.js"], "Marks": [85, 82, 90], "Age": 22 },
+    { "Name": "Mateo", "Subjects": ["MongoDB"], "Marks": [100], "Age": 20 },
+    { "Name": "Carla", "Subjects": ["Java", "Spring", "MySQL"], "Marks": [70, 65, 80], "Age": 24 },
+    { "Name": "Hugo", "Subjects": ["Node.js", "React"], "Marks": [88, 91], "Age": 21 },
+    { "Name": "Isabel", "Subjects": ["MySQL", "MongoDB", "Python", "C++"], "Marks": [78, 85, 92, 88], "Age": 25 },
+    { "Name": "Javier", "Subjects": ["React", "Java"], "Marks": [55, 60], "Age": 20 },
+    { "Name": "Valeria", "Subjects": ["MongoDB", "Python"], "Marks": [95, 98], "Age": 22 }
+]
+
+//1.- Encuentra a los alumnos que están inscritos exactamente en las materias "MySQL" y "MongoDB", en ese orden.
+db.students.find(
+    { "Subjects": ["MySQL", "MongoDB"] }
+)
+
+// 2.-Selecciona a todos los alumnos que tengan "MongoDB" dentro de su lista de materias, sin importar el orden o si tienen más.
+db.students.find(
+    { "Subjects": "MongoDB" }
+)
+
+//3.-$all. Encuentra alumnos que cursen tanto "MySQL" como "Python", independientemente del orden en el array.
+db.students.find(
+    { "Subjects": { $all: ["MySQL", "Python"] } }
+)
+
+//4.-$size. Busca a los alumnos que están inscritos en exactamente 3 materias.
+db.students.find(
+    { "Subjects": { $size: 3 } }
+)
+
+//5.- Consultar por índice. Encuentra a los alumnos cuya primera materia en la lista sea "MySQL".
+db.students.find(
+    {"Subjects.0": "MySQL"}
+)
+
+//6.-$elemMatch (Rango en arrays). Encuentra alumnos que tengan al menos una nota (en el array Marks) que sea mayor a 80 y menor a 90.
+db.students.find(
+    {"Marks": {$elemMatch: {$gt: 80, $lt: 90}}}
+)
+
+//7.- Filtrar con $in. Selecciona alumnos que cursen "Java" o "PHP".
+db.students.find(
+    {"Subjects": {$in: ["Java", "PHP"]}}
+)
+
+//8.- Proyección con $slice. Devuelve todos los alumnos, pero del array de notas (Marks) solo muestra las últimas 2.
+db.students.find(
+    {},
+    {"Marks": {$slice: -2}}
+)
+
+//9.- Busca alumnos mayores de 20 años que tengan la nota 95 en su historial de Marks.
+db.students.find(
+    {"Age": {$gt: 20}, "Marks": 95}
+)
+
+//10.- Negación con $nin. Encuentra a los alumnos que no estén cursando ni "MySQL" ni "MongoDB".
+db.students.find(
+    {Subjects: {$nin: ["MySQL", "MongoDB"]}}
+)

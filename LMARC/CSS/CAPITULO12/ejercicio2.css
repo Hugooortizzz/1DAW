@@ -1,0 +1,15 @@
+.imagen{
+    border: 1px solid rgb(202, 0, 202);
+    background-color: rgba(237, 151, 237, 0.778);
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
+
+#contenedor{
+    width: 1025px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}

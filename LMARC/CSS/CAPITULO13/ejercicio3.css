@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    text-align: center;
+    align-content: center;
+    color: #fcf5d2;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 200px 1fr 200px;
+    min-height: 100vh;
+}
+
+header {
+
+
+    background-color: #ffc1cb;
+
+    grid-column: 1 / span 12;
+}
+
+aside {
+
+
+    background-color: #4b1780;
+
+    grid-column: 1 / span 4;
+}
+
+article {
+
+
+    background-color: #d5585a;
+
+    grid-column: 5 / span 8;
+}
+
+footer {
+
+
+    background-color: #a9d8e6;
+
+    grid-column: 1 / span 12;
+}

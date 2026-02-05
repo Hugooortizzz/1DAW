@@ -1,0 +1,45 @@
+*{
+    margin: .2em;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+
+    grid-template-areas:
+        "primero primero segundo segundo"
+        "tercero cuarto segundo segundo"
+        "tercero quinto sexto sexto"
+}
+
+.hijo{
+    background-color: #ff1590;
+}
+
+#primero{
+    grid-area: primero;
+}
+
+#segundo{
+    grid-area: segundo;
+}
+
+#tercero{
+    grid-area: tercero;
+}
+
+#cuarto{
+    grid-area: cuarto;
+}
+
+#quinto{
+    grid-area: quinto;
+}
+
+#sexto{
+    grid-area: sexto;
+}

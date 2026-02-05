@@ -1,0 +1,22 @@
+#contenedor{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+}
+
+img{
+    width: 100%;
+    height: 100px;
+}
+
+.noticias{
+    flex: 1 40%;
+    border: 1px solid purple;
+    padding: 1em;
+}
+
+#ultima{
+    order: -1;
+}

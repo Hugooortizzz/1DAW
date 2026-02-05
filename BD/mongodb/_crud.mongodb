@@ -1,0 +1,96 @@
+use 01ejerciciosBasicos
+
+
+db.usuarios.insertMany([
+  {
+    "item": "journal",
+    "instock": [
+      {
+        "warehouse": "A",
+        "qty": 5
+      },
+      {
+        "warehouse": "C",
+        "qty": 15
+      }
+    ]
+  },
+  {
+    "item": "notebook",
+    "instock": [
+      {
+        "warehouse": "C",
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "item": "paper",
+    "instock": [
+      {
+        "warehouse": "A",
+        "qty": 60
+      },
+      {
+        "warehouse": "B",
+        "qty": 15
+      }
+    ]
+  },
+  {
+    "item": "planner",
+    "instock": [
+      {
+        "warehouse": "A",
+        "qty": 40
+      },
+      {
+        "warehouse": "B",
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "item": "postcard",
+    "instock": [
+      {
+        "warehouse": "B",
+        "qty": 15
+      },
+      {
+        "warehouse": "C",
+        "qty": 35
+      }
+    ]
+  }
+])
+
+db.productos.insertMany(
+[{"nombre":"Sauce - Hp","fecha":"9/8/2029","precio":327.75,"categoria":"electronics"},
+{"nombre":"Muffin Carrot - Individual","fecha":"9/27/2029","precio":138.3,"categoria":"sports equipment"},
+{"nombre":"Steel Wool S.o.s","fecha":"10/23/2027","precio":867.94,"categoria":"sports equipment"},
+{"nombre":"Carbonated Water - Blackcherry","fecha":"4/26/2030","precio":678.15,"categoria":"sports equipment"},
+{"nombre":"Leeks - Large","fecha":"1/20/2025","precio":95.74,"categoria":"sports equipment"},
+{"nombre":"Chef Hat 20cm","fecha":"10/22/2029","precio":352.12,"categoria":"electronics"},
+{"nombre":"Chutney Sauce - Mango","fecha":"10/16/2029","precio":946.04,"categoria":"electronics"},
+{"nombre":"Beef - Tongue, Fresh","fecha":"4/16/2027","precio":274.08,"categoria":"toys"},
+{"nombre":"Plate Foam Laminated 9in Blk","fecha":"3/18/2025","precio":221.34,"categoria":"sports equipment"},
+{"nombre":"Tomatoes - Cherry","fecha":"10/23/2029","precio":256.76,"categoria":"clothing"},
+{"nombre":"Plastic Wrap","fecha":"5/7/2026","precio":677.94,"categoria":"sports equipment"},
+{"nombre":"Lamb - Ground","fecha":"3/13/2028","precio":928.33,"categoria":"sports equipment"},
+{"nombre":"Juice - Propel Sport","fecha":"3/9/2023","precio":763.59,"categoria":"sports equipment"},
+{"nombre":"Eggplant - Baby","fecha":"11/7/2026","precio":499.06,"categoria":"sports equipment"},
+{"nombre":"Cheese - Mascarpone","fecha":"7/7/2030","precio":123.92,"categoria":"electronics"},
+{"nombre":"Chervil - Fresh","fecha":"8/19/2029","precio":97.31,"categoria":"home goods"},
+{"nombre":"Muffin - Blueberry Individual","fecha":"8/11/2024","precio":525.52,"categoria":"toys"},
+{"nombre":"Mortadella","fecha":"11/28/2030","precio":934.7,"categoria":"sports equipment"},
+{"nombre":"Bagelers - Cinn / Brown Sugar","fecha":"3/2/2029","precio":132.63,"categoria":"electronics"},
+{"nombre":"Sprouts - China Rose","fecha":"8/4/2029","precio":616.83,"categoria":"toys"}]
+)
+
+//1.- Insertar un solo documento en una colección llamada usuarios (nombre,edad y ciudad)
+db.usuarios.insertOne(
+    {"nombre":"Hugo", "edad":18, "ciudad":"Utrera"}
+)
+
+db.usuarios.find()

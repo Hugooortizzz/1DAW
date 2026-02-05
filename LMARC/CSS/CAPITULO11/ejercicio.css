@@ -31,6 +31,10 @@ td:hover{
     background-color: #FF9;
 }
 
+select{
+    width: 100%;
+}
+
 input:focus{
     outline: none;
     border: 2px solid #E6B700;

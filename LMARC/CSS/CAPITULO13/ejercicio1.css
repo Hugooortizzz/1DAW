@@ -1,0 +1,33 @@
+*{
+    margin: .2em;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+}
+
+.hijo{
+    background-color: #ff1590;
+}
+
+#primero{
+    grid-column: 1 / 3;
+}
+
+#segundo{
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+}
+
+#tercero{
+    grid-row: 2 / 4;
+}
+
+#sexto{
+    grid-column: 3 / 5;
+}

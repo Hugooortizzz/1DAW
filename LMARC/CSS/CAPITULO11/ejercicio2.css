@@ -45,7 +45,7 @@ input:focus{
 .ayuda{
     display: none;
     position: absolute;
-    transform: translate(380px, -50px);
+    transform: translate(27em, -50px);
     width: 20%;
 }
 
@@ -54,5 +54,10 @@ tr:hover  .ayuda{
 }
 
 #email{
-    transform: translate(380px, -20px)
+    transform: translate(27em, -20px)
+}
+
+table{
+    border: 0px;
+    border-collapse: collapse;
 }

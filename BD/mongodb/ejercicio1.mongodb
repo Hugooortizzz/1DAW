@@ -72,3 +72,11 @@ db.peaks.find(
 ).sort({"name": 1})
 
 //14.- 
+db.peaks.find(
+    {}
+).limit(2).sort({"height": 1})
+
+db.peaks.find(
+    {},
+    {"_id":0, "name":1, "height": 1}
+).sort({"height": -1}, {"name": 1})
