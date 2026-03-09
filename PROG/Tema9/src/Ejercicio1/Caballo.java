@@ -1,4 +1,4 @@
-package Tema9.Ejercicio1;
+package Ejercicio1;
 
 public class Caballo {
     private String nombre;
@@ -34,7 +34,7 @@ public class Caballo {
     }
 
     public void saltar(){
-        System.out.print("Voy a saltar");
+        System.out.println("Voy a saltar");
     }
 
     public void correr(){

@@ -1,4 +1,4 @@
-package Tema9.Ejercicio1;
+package Ejercicio1;
 
 public class Main {
     public static void main(String[] args){
@@ -16,7 +16,7 @@ public class Main {
         caballo1.saltar();
         caballo1.correr();
 
-        caballo1.toString();
-        caballo2.toString();
+        System.out.println(caballo1.toString());
+        System.out.println(caballo2.toString());
     }
 }
