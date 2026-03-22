@@ -1,0 +1,80 @@
+body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .principal {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 840px;
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .imagen {
+      width: 80px;
+      height: 80px;
+      background: #ccc;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .contenido {
+      flex: 1;
+    }
+
+    .titulo {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .subtitulo {
+      color: gray;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .botones {
+      display: flex;
+      gap: 8px;
+    }
+
+    .boton {
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #f0f0f0;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .nota {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .nota-texto {
+      text-align: right;
+      font-size: 12px;
+    }
+
+    .columna{
+        flex-direction: column;
+    }
+
+    .puntuacion {
+      background: #eee;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .estrella{
+        font-size: 30px; 
+    }

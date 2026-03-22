@@ -10,7 +10,6 @@ public class Main {
         Scanner s = new Scanner(System.in);
         Bicicleta bicicleta = new Bicicleta();
         Coche coche = new Coche();
-        Vehiculo vehiculo = new Vehiculo();
 
         while (!salir){
             System.out.println("VEHÍCULOS");
@@ -47,7 +46,7 @@ public class Main {
                     System.out.println(coche.getKilometrosRecorridos() + " km");
                     break;
                 case 7:
-                    System.out.println(vehiculo.getKilometrosTotales() + " km");
+                    System.out.println(Vehiculo.getKilometrosTotales() + " km");
                     break;
                 case 8:
                     salir = true;

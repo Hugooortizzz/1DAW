@@ -7,12 +7,12 @@ public class Gato {
     private int altura;
     private int edad;
 
-    public Gato(int altura, int edad, String nombre, int peso, String raza) {
+    public Gato(String nombre, String raza, int peso, int altura, int edad) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.peso = peso;
         this.altura = altura;
         this.edad = edad;
-        this.nombre = nombre;
-        this.peso = peso;
-        this.raza = raza;
     }
 
     public Gato() {

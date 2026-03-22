@@ -1,0 +1,9 @@
+use ("tienda");
+
+db.productos.insertOne(
+    {
+        nombre: "Smartphone",
+        precio: 800,
+        categoria: "Electrónica"
+    }
+);

@@ -1,0 +1,7 @@
+use ('crud2');
+
+
+db.clientes.find().sort({username: -1}).skip().limit(2);
+
+
+db.customers.find({name: "Juan Pérez"});

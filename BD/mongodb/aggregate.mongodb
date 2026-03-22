@@ -1,0 +1,10 @@
+use ("storeDB");
+
+db.orders.aggregate([
+  {
+    $group: {
+      _id: null,
+      totalIngresos: {$sum: "$total"}
+    }
+  }
+]);
