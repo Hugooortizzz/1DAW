@@ -1,6 +1,6 @@
-package Ejercicio3;
+package Ejercicio4;
 
-public class Oficial extends Operario{
+public class Oficial extends Operario {
     public Oficial(String nombre) {
         super(nombre);
     }

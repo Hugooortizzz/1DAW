@@ -2,9 +2,15 @@ use ("storeDB");
 
 db.orders.aggregate([
   {
+    $match: {
+      paid: true
+    }
+  },
+  {
     $group: {
       _id: null,
-      totalIngresos: {$sum: "$total"}
+      totalPagados: {$sum: "$total"}
     }
   }
 ]);
+

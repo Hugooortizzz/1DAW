@@ -1,62 +1,14 @@
-// i1.- Insertar un solo documento en una colección llamada usuarios (nombre,edad y ciudad)
-db.usuarios.insertOne({nombre: "Hugo Ortiz", edad: 18, ciudad: "Utrera" });
+use ("storeDB");
 
-// i2.- Insertar múltiples documentos (dos documentos) en una colección llamada productos (nombre precio, stock)
-db.productos.insertMany([
-    {nombre: "PS5 Pro", precio: 800, stock: 54},
-    {nombre: "Xbox Series X", precio: 500, stock: 102}
+db.orders.aggregate([
+  {
+    $match: {
+      paid: true
+    }
+  },
+  {
+    $group: {
+      totalPagados: {$sum: "$total"}
+    }
+  }
 ]);
-
-// i3.- Insertar un documento con campos: nombre, edad, ciudad y status (string)
-db.usuarios.insertOne({nombre: "Daniela Bonifacio", edad: 18, ciudad: "Antequera", status: "Estudiante"});
-
-// i4.-Insertar un documento con una fecha de creación: nombre, precio y fecha_creacion (new ISODate())
-db.productos.insertOne({nombre: "Nintendo Switch 2", precio: 480, fecha_creacion: ISODate("2025-06-05")});
-
-// i5.- Insertar un documento con una subcolección nombre, direccion => { calle, ciudad}
-db.usuarios.insertOne({nombre: "Fernando Ortiz", direccion: {calle: "Plaza Pablo Iglesias", ciudad: "Utrera"}});
-
-// a1.- Actualizar un documento en la colección usuarios cambiando el nombre (solo campo nombre).
-db.usuarios.updateOne(
-    {nombre: "Hugo Ortiz"},
-    {$set: {nombre: "Hugo Ortiz Durán"}}
-);
-
-// a2.- Actualizar múltiples documentos en productos incrementando el precio (solo campo precio)
-db.productos.updateMany(
-    {},
-    {$mul: {precio: 1.10}} //Precio multiplicado por 1.10
-);
-
-// a3.- Actualizar “Ana” con el campo país a España (si no existe el campo “pais” lo creará y si ya existe el campo lo modificará)
-
-// Como no existe Ana lo voy a crear
-db.usuarios.insertOne({nombre: "Ana", edad: 24, ciudad: "Torremolinos"});
-
-// Y la actualizo añadiendo el país
-db.usuarios.updateOne(
-    {nombre: "Ana"},
-    {$set: {pais: "España"}}
-);
-
-// a4.- Actualizar el documento que tenga como nombre de producto “Laptop” con un campo llamado “fecha_modificacion”. Este último campo tendrá la fecha actual.
-
-// De nuevo, Laptop no existe, por lo que lo voy a crear
-db.productos.insertOne({nombre: "Laptop", precio: 600, stock: 203});
-
-// Y lo actualizo añadiendo la fecha
-db.productos.updateOne(
-    {nombre: "Laptop"},
-    {$set: {fecha_modificacion: new Date()}}
-);
-
-// a5.- Asignar el campo ciudad con una cadena vacía al usuario Luis.
-
-// De nuevo, Luis no existe, por lo que lo crearé
-db.usuarios.insertOne({nombre: "Luis", edad: 43, ciudad: "Alcalá de Guadaira"});
-
-// Y lo actualizo
-db.usuarios.updateOne(
-    {nombre: "Luis"},
-    {$set: {ciudad: null}}
-);

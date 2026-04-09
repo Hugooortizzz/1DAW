@@ -1,22 +1,7 @@
-package Ejercicio3;
+package Ejercicio4;
 
-public class Empleado {
-    private String nombre;
-
-    public Empleado(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+public interface Empleado {
 
     @Override
-    public String toString() {
-        return "Empleado " + this.nombre;
-    }
+    public String toString();
 }

@@ -1,12 +1,14 @@
-package Ejercicio3;
+package Ejercicio4;
 
-public class Directivo extends Empleado {
+public class Directivo implements Empleado {
+    private String nombre;
+
     public Directivo(String nombre) {
-        super(nombre);
+        this.nombre = nombre;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " -> Directivo";
+        return "Empleado " + this.nombre + " -> Directivo";
     }
 }

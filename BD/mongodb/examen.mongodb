@@ -1,0 +1,16 @@
+use ("tienda");
+
+db.productos.aggregate(
+    {
+        $match: {
+            precio: {$gt: 50}
+        }
+    },
+    {
+        $group: {
+            _id: "$categoria",
+            precioPromedio: {$avg: "$precio"}
+        }
+    }
+);
+

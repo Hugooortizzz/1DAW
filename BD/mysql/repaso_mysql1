@@ -1,0 +1,59 @@
+CREATE DATABASE empresa;
+
+USE empresa;
+
+CREATE TABLE departamento (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50)
+);
+
+CREATE TABLE empleado (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    salario DECIMAL(10,2),
+    id_departamento INT,
+    FOREIGN KEY (id_departamento) REFERENCES departamento(id)
+);
+
+CREATE TABLE proyecto (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    presupuesto DECIMAL(10,2)
+);
+
+CREATE TABLE empleado_proyecto (
+    id_empleado INT,
+    id_proyecto INT,
+    PRIMARY KEY (id_empleado, id_proyecto),
+    FOREIGN KEY (id_empleado) REFERENCES empleado(id),
+    FOREIGN KEY (id_proyecto) REFERENCES proyecto(id)
+);
+
+INSERT INTO departamento VALUES
+(1, 'IT'),
+(2, 'RRHH'),
+(3, 'Ventas');
+
+INSERT INTO empleado VALUES
+(1, 'Ana', 2000, 1),
+(2, 'Luis', 2500, 1),
+(3, 'Marta', 1800, 2);
+
+INSERT INTO proyecto VALUES
+(1, 'Web', 10000),
+(2, 'App', 15000),
+(3, 'Marketing', 8000);
+
+INSERT INTO empleado_proyecto VALUES
+(1, 1),
+(2, 2),
+(3, 3);
+
+
+-- 1.- Mostrar empleados con su departamento.
+SELECT empleado.nombre AS empleado, departamento.nombre AS departamento FROM empleado
+JOIN departamento
+ON empleado.id_departamento = departamento.id;
+
+-- 2. Contar cuántos empleados hay por departamento.
+SELECT 
