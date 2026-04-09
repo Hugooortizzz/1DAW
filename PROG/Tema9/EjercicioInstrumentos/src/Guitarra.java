@@ -8,5 +8,37 @@ public class Guitarra extends Instrumento {
         this.numCuerdas = numCuerdas;
     }
 
+    public double calcularPrecioFinal(){
+        double precioFinal = this.getPrecioBase();
 
+        if (this.electrica){
+            precioFinal += 150;
+        }
+
+        if (this.numCuerdas > 6){
+           precioFinal += 60;
+        }
+
+        return precioFinal;
+    }
+
+    public boolean esEspecial(){
+        if (this.electrica || this.numCuerdas > 6){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public String getTipo(){
+        return "Guitarra";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Guitarra{" +
+                "numCuerdas=" + numCuerdas +
+                ", electrica=" + electrica +
+                '}';
+    }
 }

@@ -33,7 +33,7 @@ public abstract class Instrumento {
 
     public abstract boolean esEspecial();
 
-    public abstract void getTipo(); //void momentaneo
+    public abstract String getTipo();
 
     public int getAnioFabricacion() {
         return anioFabricacion;
@@ -53,6 +53,26 @@ public abstract class Instrumento {
 
     public boolean isVendido() {
         return vendido;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setPrecioBase(double precioBase) {
+        this.precioBase = precioBase;
+    }
+
+    public void setAnioFabricacion(int anioFabricacion) {
+        this.anioFabricacion = anioFabricacion;
+    }
+
+    public void setVendido(boolean vendido) {
+        this.vendido = vendido;
     }
 
     @Override
