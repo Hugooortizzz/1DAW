@@ -13,7 +13,7 @@ public class Parametros {
     }
 
     public static void tipoParametro(int i){
-        System.out.println("Ha pasado un entero con valor " + i);
+        System.out.println("Ha pasado un entero con valor "+ i);
     }
 
     public static void tipoParametro(double d){

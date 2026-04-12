@@ -1,5 +1,7 @@
 package Ejercicio7;
 
+import java.util.Random;
+
 public class PilotoFormula1 implements MetodosDePilotoFormula1 {
     private String escuderia;
     private String nombre;
@@ -10,29 +12,52 @@ public class PilotoFormula1 implements MetodosDePilotoFormula1 {
     private int edad;
     private int tiempoEnF1;
     private int tiempoEnEscuderia;
+    private static int n_pilotos = 0;
+    private static int n_carreras;
+
+    public PilotoFormula1(String escuderia, String nombre, String apellido, String nacionalidad, int trofeosGanados, int numeroEnParrilla, int edad, int tiempoEnF1, int tiempoEnEscuderia) {
+        this.escuderia = escuderia;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.nacionalidad = nacionalidad;
+        this.trofeosGanados = trofeosGanados;
+        this.numeroEnParrilla = numeroEnParrilla;
+        this.edad = edad;
+        this.tiempoEnF1 = tiempoEnF1;
+        this.tiempoEnEscuderia = tiempoEnEscuderia;
+    }
 
     public void celebracionTriunfo(){
         System.out.println("Ahora unas palabras del piloto " + this.nacionalidad + ". Muchas gracias al equipo " + this.escuderia + " por este triunfo");
     }
 
+    //No sería mejor que fuera static?
     public void circuito (String circuito){
         System.out.println("Bienvenidos al circuito de " + circuito + "... y comienza la carrera");
     }
 
     public void adelanta(PilotoFormula1 piloto){
-        System.out.println(this.nombre + " adelanta a " + piloto.getNombre() + " y se pone primero");
+        System.out.println(this.nombrar() + " adelanta a " + piloto.getApellido() + " y se pone primero");
     }
 
     public void gana(){
-        System.out.println("¡¡¡" + this.nombre + " cruza la línea de parrilla y gana!!!");
+        System.out.println("¡¡¡" + this.nombrar() + " cruza la línea de parrilla y gana!!!");
     }
 
     public void averia(){
-        System.out.println("Atención: " + this.nombre + " lleva el coche a boxes por una avería");
+        System.out.println("Atención: " + this.nombrar() + " lleva el coche a boxes por una avería");
     }
 
-    public void nuevoTrofeo(){
+    public int nuevoTrofeo(){
+        this.trofeosGanados ++;
+        System.out.println("Y con este, " + this.getTrofeosGanados());
+        return trofeosGanados;
+    }
 
+    public void nuevaEscuderia(String nuevaEscuderia){
+        System.out.println(this.apellido + " ha cambiado a la escudería " + nuevaEscuderia);
+        this.setEscuderia(nuevaEscuderia);
+        this.tiempoEnEscuderia = 0;
     }
 
     public String getEscuderia() {
@@ -68,6 +93,7 @@ public class PilotoFormula1 implements MetodosDePilotoFormula1 {
     }
 
     public int getTrofeosGanados() {
+        System.out.println(this.nombrar() + " lleva " + this.trofeosGanados + " este año.");
         return trofeosGanados;
     }
 
@@ -106,4 +132,19 @@ public class PilotoFormula1 implements MetodosDePilotoFormula1 {
     public void setTiempoEnEscuderia(int tiempoEnEscuderia) {
         this.tiempoEnEscuderia = tiempoEnEscuderia;
     }
+
+    public String nombrar(){
+        Random r = new Random();
+        int opcion = r.nextInt(1, 3);
+
+        if (opcion == 1){
+            return this.nombre;
+        }else if (opcion == 2){
+            return this.apellido;
+        }else{
+            return this.nombre + this.apellido;
+        }
+    }
+
+
 }
