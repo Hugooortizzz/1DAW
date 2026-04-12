@@ -50,7 +50,7 @@ public class PilotoFormula1 implements MetodosDePilotoFormula1 {
 
     public int nuevoTrofeo(){
         this.trofeosGanados ++;
-        System.out.println("Y con este, " + this.getTrofeosGanados());
+        System.out.println("Y con este, " + nombrar() + " lleva " + this.getTrofeosGanados() + " trofeos este año.");
         return trofeosGanados;
     }
 
@@ -93,7 +93,7 @@ public class PilotoFormula1 implements MetodosDePilotoFormula1 {
     }
 
     public int getTrofeosGanados() {
-        System.out.println(this.nombrar() + " lleva " + this.trofeosGanados + " este año.");
+        System.out.println(this.nombrar() + " lleva " + this.trofeosGanados + " trofeos este año.");
         return trofeosGanados;
     }
 

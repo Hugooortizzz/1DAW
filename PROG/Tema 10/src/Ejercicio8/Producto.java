@@ -1,16 +1,16 @@
-package Ejercicio7;
+package Ejercicio8;
 
 public class Producto {
     private String nombre;
-    private int precio;
+    private double precio;
 
-    public Producto(String nombre, int precio) {
+    public Producto(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 
-    public int calcular(int n_productos){
-        int calculo;
+    public double calcular(int n_productos){
+        double calculo;
 
         calculo = this.getPrecio() * n_productos;
 
@@ -25,7 +25,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
