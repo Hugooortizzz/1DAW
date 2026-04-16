@@ -35,15 +35,31 @@ public class Carta implements Comparable<Carta>{
     public int compareTo(Carta c){
         int resultado = (this.palo).compareTo(c.getPalo());
 
-        if (resultado != 0){
+        if (resultado != 0){ //Si el palo no es el mismo, lo devuelve ordenado por el palo
             return resultado;
         }
 
-        return (this.valor).compareTo(c.getValor());
+        //Sin embargo, si sí que tiene el mismo palo, devuelve la comparación según su valor
+        return ((Integer) this.valor).compareTo(c.getValor());
     }
 
     @Override
     public String toString() {
-        return this.valor + " de " + this.palo;
+        String valor = String.valueOf(this.valor);
+        switch(valor){
+            case "1":
+                valor = "as";
+                break;
+            case "10":
+                valor = "sota";
+                break;
+            case "11":
+                valor = "caballo";
+                break;
+            case "12":
+                valor = "rey";
+                break;
+        }
+        return valor + " de " + this.palo;
     }
 }
