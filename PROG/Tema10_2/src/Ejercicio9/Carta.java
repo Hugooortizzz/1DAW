@@ -2,7 +2,7 @@ package Ejercicio9;
 
 import java.util.Random;
 
-public class Carta {
+public class Carta implements Comparable<Carta>{
     private Palo palo;
     private int valor;
     private static Palo[] palos = Palo.values(); //Array con los palos
@@ -30,6 +30,16 @@ public class Carta {
 
     public void setValor(int valor) {
         this.valor = valor;
+    }
+
+    public int compareTo(Carta c){
+        int resultado = (this.palo).compareTo(c.getPalo());
+
+        if (resultado != 0){
+            return resultado;
+        }
+
+        return (this.valor).compareTo(c.getValor());
     }
 
     @Override

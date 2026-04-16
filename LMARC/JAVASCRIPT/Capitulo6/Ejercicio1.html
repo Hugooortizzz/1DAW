@@ -1,0 +1,81 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 1 - Eventos</title>
+
+    <script type="text/javascript">
+       function muestraOculta(id) {
+
+    // Obtener el elemento del párrafo usando su id dinámico
+    // Pista: el id tiene la forma "contenidos_1", "contenidos_2", etc.
+    // Usa document.getElementById() concatenando el texto con el parámetro id
+    var contenidos = document.getElementById("contenidos_" + id);
+
+    // Obtener el enlace correspondiente
+    // Pista: el id del enlace sigue el mismo patrón: "enlace_1", "enlace_2", etc.
+    var enlace = document.getElementById("enlace_" + id);
+
+
+    // Comprobar si el contenido está oculto
+    // Pista: revisa la propiedad style.display
+    // Cuando está oculto vale "none"
+
+    if ( contenidos.style.display == "none"/* condición para saber si está oculto */ ) {
+
+        // Si está oculto:
+        // - Cambiar display para que se muestre (¿qué valor muestra un elemento en bloque?)
+        // - Cambiar el texto del enlace para que diga "Ocultar contenidos"
+        contenidos.style.display = 'block';
+        enlace.innerHTML = "Ocultar contenidos";
+
+    } else {
+
+        // Si está visible:
+        // - Cambiar display para ocultarlo
+        // - Cambiar el texto del enlace para que diga "Mostrar contenidos"
+        contenidos.style.display = "none";
+        enlace.innerHTML = "Mostrar contenidos";
+
+    }
+}
+    </script>
+
+</head>
+
+<body>
+
+    <p id="contenidos_1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci.
+        Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies,
+        turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+    </p>
+    <a id="enlace_1" href="#" onclick="muestraOculta(1);">
+        Ocultar contenidos
+    </a>
+    <br /><br />
+
+    <p id="contenidos_2">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci.
+        Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies,
+        turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+    </p>
+    <a id="enlace_2" href="#" onclick="muestraOculta(2);">
+        Ocultar contenidos
+    </a>
+    <br /><br />
+
+    <p id="contenidos_3">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci.
+        Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies,
+        turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+    </p>
+    <a id="enlace_3" href="#" onclick="muestraOculta(3);">
+        Ocultar contenidos
+    </a>
+
+</body>
+
+</html>
