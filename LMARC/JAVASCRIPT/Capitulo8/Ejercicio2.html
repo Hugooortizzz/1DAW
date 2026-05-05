@@ -11,6 +11,7 @@
 
     <style>
         #galeria img {
+            margin-top: 300px;
             width: 200px;
             margin: 10px;
             cursor: pointer;
@@ -21,15 +22,15 @@
 
 <body>
     <div id="galeria">
-        <a  href="https://picsum.photos/id/1015/1000/600">
-            <img id="rio" src="https://picsum.photos/id/1015/300/200">
+        <a id="rio" href="https://picsum.photos/id/1015/1000/600">
+            <img src="https://picsum.photos/id/1015/300/200">
         </a>
 
         <a id="perro" href="https://picsum.photos/id/1025/1000/600">
             <img src="https://picsum.photos/id/1025/300/200">
         </a>
 
-        <a id="perro" href="https://picsum.photos/id/1035/1000/600">
+        <a id="cascada" href="https://picsum.photos/id/1035/1000/600">
             <img src="https://picsum.photos/id/1035/300/200">
         </a>
     </div>
@@ -45,7 +46,24 @@
         });
 
         tippy('#rio', {
-            content: "Esto es un río"
+            content: "Esto es un río",
+            followCursor: "true",
+            placement: "right",
+            offset: [0, 15]
+        });
+
+        tippy('#perro', {
+            content: "Esto es un perro",
+            followCursor: "true",
+            placement: "right",
+            offset: [0, 15]
+        });
+
+        tippy('#cascada', {
+            content: "Esto es una cascada",
+            followCursor: "true",
+            placement: "right",
+            offset: [0, 15]
         });
     </script>
 </body>
