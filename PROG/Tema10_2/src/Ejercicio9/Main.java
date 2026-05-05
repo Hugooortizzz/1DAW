@@ -14,14 +14,8 @@ public class Main {
 
         for (int i = 0; i < 9; i++) {
             do{
-                existe = false;
                 cartaAleatoria = new Carta();
-                for (Carta c : cartas){
-                    if (cartaAleatoria.getPalo().equals(c.getPalo()) && cartaAleatoria.getValor() == c.getValor()){
-                        existe = true;
-                    }
-                }
-            }while(existe);
+            }while(cartas.contains(cartaAleatoria));
 
             cartas.add(cartaAleatoria);
         }

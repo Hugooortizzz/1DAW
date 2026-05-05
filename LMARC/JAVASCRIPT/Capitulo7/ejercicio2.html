@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="contraseña" minlength="6" onkeypress="validar()">
+    <p id="mensaje"></p>
+    <script type="text/javascript">
+        function validar(){
+            let contraseña = document.getElementById("contraseña");
+            let mensaje = document.getElementById("mensaje");
+
+            if (contraseña.value.length < 6){
+                mensaje.textContent = "Muy corta";
+                mensaje.style.color = "red";
+            }else{
+                mensaje.textContent = "Longitud válida";
+                mensaje.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

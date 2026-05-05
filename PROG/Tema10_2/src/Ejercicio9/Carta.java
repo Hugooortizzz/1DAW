@@ -1,5 +1,6 @@
 package Ejercicio9;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Carta implements Comparable<Carta>{
@@ -41,6 +42,18 @@ public class Carta implements Comparable<Carta>{
 
         //Sin embargo, si sí que tiene el mismo palo, devuelve la comparación según su valor
         return ((Integer) this.valor).compareTo(c.getValor());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Carta carta = (Carta) o;
+        return valor == carta.valor && palo == carta.palo;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(palo, valor);
     }
 
     @Override

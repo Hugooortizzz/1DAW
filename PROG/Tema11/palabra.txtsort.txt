@@ -1,0 +1,6 @@
+fresa
+mango
+manzana
+pera
+piña
+uva

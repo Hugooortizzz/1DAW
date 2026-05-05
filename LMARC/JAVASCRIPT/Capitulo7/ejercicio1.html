@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onblur="validar()" onkeypress="validar()" id="input">
+    <p id="mensaje"></p>
+    <script type="text/javascript">
+        function validar(){
+            let input = document.getElementById("input");
+            let mensaje = document.getElementById("mensaje");
+
+            if (input.value.trim().length < 1){
+                input.style.border = "2px solid red";
+                mensaje.textContent = "Este campo es obligatorio";
+                mensaje.style.color = "red";
+            }else{
+                input.style.border = "2px solid green";
+                mensaje.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>

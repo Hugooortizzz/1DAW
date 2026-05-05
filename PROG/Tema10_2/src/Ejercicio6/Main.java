@@ -24,16 +24,22 @@ public class Main {
         while (oportunidades > 0){
             System.out.println("Nombre de usuario: ");
             usuario = s.nextLine();
-            System.out.println("Contraseña: ");
-            if (credenciales.get(usuario).equals(s.next())){
-                System.out.print("Ha accdedido al área restringida");
-                accedido = true;
-                oportunidades = 0;
+            if (credenciales.containsKey(usuario)){
+                System.out.println("Contraseña: ");
+                if (credenciales.get(usuario).equals(s.next())){
+                    System.out.print("Ha accdedido al área restringida");
+                    accedido = true;
+                    oportunidades = 0;
 
+                }else{
+                    System.out.println("Credenciales incorrectas");
+                    oportunidades --;
+                }
             }else{
-                System.out.println("Credenciales incorrectas");
+                System.out.println("Nombre de usuario incorrecto");
                 oportunidades --;
             }
+
             s.nextLine();
         }
 

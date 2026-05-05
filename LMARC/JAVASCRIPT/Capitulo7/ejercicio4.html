@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="contraseña">
+    <input type="password" id="confirmar" onblur="validar()" onkeyup="validar()">
+    <p id="mensaje"></p>
+    <script type="text/javascript">
+        function validar(){
+            let confirmar = document.getElementById("confirmar");
+            let contraseña = document.getElementById("contraseña");
+            let mensaje = document.getElementById("mensaje");
+
+            if (confirmar.value == contraseña.value){
+                mensaje.textContent= "Coinciden";
+                mensaje.style.color = "green";
+            }else{
+                mensaje.textContent= "No coinciden";
+                mensaje.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

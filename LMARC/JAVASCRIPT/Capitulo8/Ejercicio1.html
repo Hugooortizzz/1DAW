@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body>
+    <h2>Calendario</h2>
+    <p id="mensaje" style="background-color: yellow; width: 200px; height: 50px; align-content: center; text-align: center;"></p>
+
+    <input type="text" id="fecha" onchange="mostrarFecha()" placeholder="Selecciona un rango de fechas">
+
+    <!-- JS principal -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- idioma español -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+    <script>
+
+        flatpickr("#fecha", {
+            altInput: true,
+            dateFormat: "l\\,\\ d\\ \\d\\e\\ F\\ \\d\\e\\ Y",
+            altFormat: "Y/m/d",
+            minDate: "today",
+            locale: "es",
+            mode: "single",
+            defaultDate: "today"
+        });
+
+        document.getElementById("mensaje").textContent = document.getElementById("fecha").value;
+
+        function mostrarFecha(){
+            let mensaje = document.getElementById("mensaje");
+            let fecha = document.getElementById("fecha");
+
+            mensaje.textContent = fecha.value;
+        }
+
+    </script>
+</body>
+
+</html>

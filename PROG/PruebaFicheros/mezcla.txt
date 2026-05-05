@@ -1,0 +1,8 @@
+naranja
+5
+mango
+100
+chirimoya
+23
+45
+76

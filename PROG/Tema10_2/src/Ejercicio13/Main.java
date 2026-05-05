@@ -16,11 +16,14 @@ public class Main {
         ArrayList <Articulo> almacen = new ArrayList<Articulo>();
         Scanner s = new Scanner(System.in);
         boolean salir = false;
+        boolean salir_v;
         boolean existe;
         String codigo;
         String descripcion;
         double precioCompra;
         double precioVenta;
+        double factura;
+
 
         while (!salir){
             System.out.println("1.- Listado");
@@ -41,11 +44,24 @@ public class Main {
                     existe = false;
                     System.out.print("Introduzca el código del producto: ");
                     codigo = s.next();
-                    for (Articulo a : almacen){
-                        if (a.getCodigo().equals(codigo)){
-                            existe = true;
-                            System.out.println("Ese código ya existe");
-                        }else{
+                    s.nextLine();
+                    if(almacen.size() == 0){ //Si es el primer objeto no controla que exista
+                        System.out.println("Introduzca la descripción del producto: ");
+                        descripcion = s.nextLine();
+                        System.out.println("Introduzca el precio de compra: ");
+                        precioCompra = s.nextDouble();
+                        System.out.println("Introduzca el precio de venta: ");
+                        precioVenta = s.nextDouble();
+
+                        almacen.add(new Articulo(codigo, descripcion, precioCompra, precioVenta));
+                    }else{
+                        for (Articulo a : almacen){
+                            if (a.getCodigo().equals(codigo)){
+                                existe = true;
+                                System.out.println("Ese código ya existe");
+                            }
+                        }
+                        if (!existe){
                             System.out.println("Introduzca la descripción del producto: ");
                             descripcion = s.nextLine();
                             System.out.println("Introduzca el precio de compra: ");
@@ -56,6 +72,7 @@ public class Main {
                             almacen.add(new Articulo(codigo, descripcion, precioCompra, precioVenta));
                         }
                     }
+
                     break;
                 case 3:
                     existe = false;
@@ -64,13 +81,15 @@ public class Main {
                     for (Articulo a : almacen){
                         if (a.getCodigo().equals(codigo)){
                             existe = true;
-                            almacen.remove(a);
+                            almacen.remove(almacen.indexOf(a));
                             System.out.println("Artículo borrado con éxito");
                         }
                     }
 
                     if (!existe){
                         System.out.println("Ese producto no existe");
+                    }else{
+
                     }
                     break;
                 case 4:
@@ -133,6 +152,42 @@ public class Main {
                     break;
 
                 case 6:
+                    factura = 0;
+                    salir_v = false;
+                    while (!salir_v){
+                        System.out.println("1.- Vender producto");
+                        System.out.println("2.- Ver factura");
+                        System.out.println("3.- Salir");
+                        switch(s.nextInt()){
+                            case 1:
+                                System.out.print("Introduzca el código del producto: ");
+                                codigo = s.next();
+                                System.out.println("¿Cuántas unidades va a vender?");
+                                for (Articulo a : almacen){
+                                    if (a.getCodigo().equals(codigo)){
+                                        factura += a.vender(s.nextInt());
+                                    }
+                                }
+                                break;
+                            case 2:
+                                System.out.println("Precio sin iva: " + factura);
+                                System.out.println("Precio con iva: " + (factura*1.21));
+                                break;
+                            case 3:
+                                salir_v = true;
+                                break;
+                            default:
+                                System.out.println("Introduzca una opción válida");
+                                break;
+                        }
+                    }
+                    break;
+                case 7:
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("Introduzca una opción válida");
+                    break;
 
 
             }

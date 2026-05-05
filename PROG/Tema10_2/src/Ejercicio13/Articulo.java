@@ -33,6 +33,10 @@ public class Articulo {
         }
     }
 
+    public double vender(int n){
+        return this.precioVenta * n;
+    }
+
     public String getCodigo() {
         return codigo;
     }

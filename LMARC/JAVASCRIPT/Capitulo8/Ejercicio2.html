@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+
+    <style>
+        #galeria img {
+            width: 200px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="galeria">
+        <a  href="https://picsum.photos/id/1015/1000/600">
+            <img id="rio" src="https://picsum.photos/id/1015/300/200">
+        </a>
+
+        <a id="perro" href="https://picsum.photos/id/1025/1000/600">
+            <img src="https://picsum.photos/id/1025/300/200">
+        </a>
+
+        <a id="perro" href="https://picsum.photos/id/1035/1000/600">
+            <img src="https://picsum.photos/id/1035/300/200">
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script>
+
+        lightGallery(document.getElementById('galeria'), {
+            speed: 500
+        });
+
+        tippy('#rio', {
+            content: "Esto es un río"
+        });
+    </script>
+</body>
+
+</html>

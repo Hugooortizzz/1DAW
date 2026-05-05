@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function limitar(maximoCaracteres, event) {
+            var elemento = document.getElementById("texto");
+            let mensaje = document.getElementById("mensaje");
+            let caracteres = (maximoCaracteres - elemento.value.length) -1
+            let mostrarCaracteres = document.getElementById("caracteres");
+
+            
+
+            if (event.key == "Backspace" || event.key == "Delete" || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                if ((event.key == "Backspace" || event.key == "Delete") && (caracteres +2) <= maximoCaracteres){
+                    mensaje.textContent = "Puedes escribir " + (caracteres + 2) + " más";
+                }
+                if(caracteres < 8){
+                    mensaje.style.color = "red";
+                }else{
+                    mensaje.style.color = "black";
+                }
+            } else {
+                if(caracteres < 10){
+                    mensaje.style.color = "red";
+                }else{
+                    mensaje.style.color = "black";
+                }
+
+                if (elemento.value.length >= maximoCaracteres) {
+                    return false;
+                } else {
+                    mensaje.textContent = "Puedes escribir " + caracteres + " más";
+                    return true;
+                }
+            }
+
+            
+        }
+    </script>
+    <textarea id="texto" onkeydown="return limitar(15, event);"></textarea>
+    <p id="mensaje"></span></p>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <script type="text/javascript"> 
+            function validar(){
+                let submit = document.getElementById("enviar");
+                let nombre = document.getElementById("nombre");
+                let email = document.getElementById("email");
+                if (nombre != null && email.value.includes('@')){
+                    submit.disabled = false;
+                }else{
+                    submit.disabled = true;
+                }
+            }
+        </script>
+        <b>Nombre</b><br>
+        <input type="name" id="nombre" onblur="validar()" onkeyup="validar()"><br>
+        <b>Email</b><br>
+        <input type="email" id="email" onblur="validar()" onkeyup="validar()"><br>
+        <input type="submit" id="enviar" disabled value="Enviar">
+        
+    </form>
+</body>
+</html>
