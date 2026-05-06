@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aula>
+    <alumno>
+        <dni>9923481L</dni>
+        <nombre>Hugo</nombre>
+        <apellidos>Ortiz Durán</apellidos>
+        <sexo>Masculino</sexo>
+        <fechaNacimiento>30-12-2007</fechaNacimiento>
+        <direccion>Plaza del Altozano</direccion>
+        <telefono>682562345<telefono>
+        <notaMedia>10</notaMedia>
+    </alumno>
+    <alumno>
+        <dni>8856912A</dni>
+        <nombre>Adrián</nombre>
+        <apellidos>Jimenez Ruiz</apellidos>
+        <sexo>Masculino</sexo>
+        <fechaNacimiento>14-04-1998</fechaNacimiento>
+        <direccion>El Naranjal</direccion>
+        <telefono>6547592387<telefono>
+        <notaMedia>9</notaMedia>
+    </alumno>
+    <alumno>
+        <dni>583960M</dni>
+        <nombre>Francisco Javier</nombre>
+        <apellidos>Alba Parra</apellidos>
+        <sexo>Masculino</sexo>
+        <fechaNacimiento>02-02-2007</fechaNacimiento>
+        <direccion>El Tinte</direccion>
+        <telefono>679537593<telefono>
+        <notaMedia>7</notaMedia>
+    </alumno>
+    <alumno>
+        <dni>90838015M</dni>
+        <nombre>Francisco José</nombre>
+        <apellidos>Gago Caballero</apellidos>
+        <sexo>Masculino</sexo>
+        <fechaNacimiento>29-07-2007</fechaNacimiento>
+        <direccion>El Junquillo</direccion>
+        <telefono>657342095<telefono>
+        <notaMedia>9</notaMedia>
+    </alumno>
+    <alumno>
+        <dni>7783652A</dni>
+        <nombre>Pablo</nombre>
+        <apellidos>Cotrino Navarro</apellidos>
+        <sexo>Masculino</sexo>
+        <fechaNacimiento>24-08-2007</fechaNacimiento>
+        <direccion>Vistalegre</direccion>
+        <telefono>692547628<telefono>
+        <notaMedia>3</notaMedia>
+    </alumno>
+<aula>
