@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cartelera>
+    <pelicula estreno="1995">
+        <titulo>Seven</titulo>
+        <nacionalidad>EE.UU.</nacionalidad>
+        <duracion>
+            <horas>2</horas>
+            <minutos>07</minutos>
+        </duracion>
+        <director>David Fincher</director>
+        <actores>
+            <actor tipo="principal">
+                <nombre>Brad</nombre>
+                <apellidos>Pitt</apellidos>
+            </actor>
+            <actor tipo="reparto">
+                <nombre>Morgan</nombre>
+                <apellidos>Freeman</apellidos>
+            </actor>
+        </actores>
+        <descripcion>Dos detectives persiguen a un asesino en serie que usa los siete pecados capitales como motivo de sus crímenes.</descripcion>
+    </pelicula>
+
+    <pelicula estreno="2018">
+        <titulo>Spider-Man: Un Nuevo Universo</titulo>
+        <nacionalidad>EE.UU.</nacionalidad>
+        <duracion>
+            <horas>1</horas>
+            <minutos>57</minutos>
+        </duracion>
+        <director>Bob Persichetti, Peter Ramsey, Rodney Rothman</director>
+        <actores>
+            <actor tipo="principal">
+                <nombre>Shameik</nombre>
+                <apellidos>Moore</apellidos>
+            </actor>
+            <actor tipo="reparto">
+                <nombre>Hailee</nombre>
+                <apellidos>Steinfeld</apellidos>
+            </actor>
+        </actores>
+        <descripcion>Miles Morales se convierte en Spider-Man y debe colaborar con otros héroes de distintas dimensiones para salvar el multiverso.</descripcion>
+    </pelicula>
+
+    <pelicula estreno="2003">
+        <titulo>Kill Bill: Volumen 1</titulo>
+        <nacionalidad>EE.UU.</nacionalidad>
+        <duracion>
+            <horas>1</horas>
+            <minutos>51</minutos>
+        </duracion>
+        <director>Quentin Tarantino</director>
+        <actores>
+            <actor tipo="principal">
+                <nombre>Uma</nombre>
+                <apellidos>Thurman</apellidos>
+            </actor>
+            <actor tipo="reparto">
+                <nombre>Lucy</nombre>
+                <apellidos>Liu</apellidos>
+            </actor>
+        </actores>
+        <descripcion>Una asesina conocida como La Novia busca venganza contra su antiguo jefe y su banda de asesinos que la dieron por muerta.</descripcion>
+    </pelicula>
+</cartelera>

@@ -5,9 +5,13 @@
         <nombre>Hugo</nombre>
         <apellidos>Ortiz Durán</apellidos>
         <sexo>Masculino</sexo>
-        <fechaNacimiento>30-12-2007</fechaNacimiento>
+        <fechaNacimiento>
+            <dia>30</dia>
+            <mes>12</mes>
+            <año>2007</año>
+        </fechaNacimiento>
         <direccion>Plaza del Altozano</direccion>
-        <telefono>682562345<telefono>
+        <telefono>682562345</telefono>
         <notaMedia>10</notaMedia>
     </alumno>
     <alumno>
@@ -15,9 +19,13 @@
         <nombre>Adrián</nombre>
         <apellidos>Jimenez Ruiz</apellidos>
         <sexo>Masculino</sexo>
-        <fechaNacimiento>14-04-1998</fechaNacimiento>
+        <fechaNacimiento>
+            <dia>14</dia>
+            <mes>04</mes>
+            <año>1998</año>
+        </fechaNacimiento>
         <direccion>El Naranjal</direccion>
-        <telefono>6547592387<telefono>
+        <telefono>6547592387</telefono>
         <notaMedia>9</notaMedia>
     </alumno>
     <alumno>
@@ -25,9 +33,13 @@
         <nombre>Francisco Javier</nombre>
         <apellidos>Alba Parra</apellidos>
         <sexo>Masculino</sexo>
-        <fechaNacimiento>02-02-2007</fechaNacimiento>
+        <fechaNacimiento>
+            <dia>02</dia>
+            <mes>02</mes>
+            <año>2007</año>
+        </fechaNacimiento>
         <direccion>El Tinte</direccion>
-        <telefono>679537593<telefono>
+        <telefono>679537593</telefono>
         <notaMedia>7</notaMedia>
     </alumno>
     <alumno>
@@ -35,9 +47,13 @@
         <nombre>Francisco José</nombre>
         <apellidos>Gago Caballero</apellidos>
         <sexo>Masculino</sexo>
-        <fechaNacimiento>29-07-2007</fechaNacimiento>
+        <fechaNacimiento>
+            <dia>29</dia>
+            <mes>07</mes>
+            <año>2007</año>
+        </fechaNacimiento>
         <direccion>El Junquillo</direccion>
-        <telefono>657342095<telefono>
+        <telefono>657342095</telefono>
         <notaMedia>9</notaMedia>
     </alumno>
     <alumno>
@@ -45,9 +61,13 @@
         <nombre>Pablo</nombre>
         <apellidos>Cotrino Navarro</apellidos>
         <sexo>Masculino</sexo>
-        <fechaNacimiento>24-08-2007</fechaNacimiento>
+        <fechaNacimiento>
+            <dia>24</dia>
+            <mes>08</mes>
+            <año>2007</año>
+        </fechaNacimiento>
         <direccion>Vistalegre</direccion>
-        <telefono>692547628<telefono>
+        <telefono>692547628</telefono>
         <notaMedia>3</notaMedia>
     </alumno>
-<aula>
+</aula>

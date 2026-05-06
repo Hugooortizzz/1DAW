@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<escuela>
+    <curso identificador="C001">
+        <nombre>Desarrollo Web Fullstack</nombre>
+        <duracion>600 horas</duracion>
+        <descripcion>Curso intensivo de programación moderna.</descripcion>
+        <siBeca/>
+        <aula informatica="si">
+            <numPlanta>1</numPlanta>
+            <numAula>102</numAula>
+        </aula>
+        <precio>
+            <antiguosAlumnos>800</antiguosAlumnos>
+            <nuevosAlumnos>1200</nuevosAlumnos>
+        </precio>
+        <semanas>
+            <semana horario="mañana">
+                <inicio><dia>01</dia><mes>09</mes><año>2026</año></inicio>
+                <fin><dia>05</dia><mes>09</mes><año>2026</año></fin>
+            </semana>
+            <semana horario="mañana">
+                <inicio><dia>08</dia><mes>09</mes><año>2026</año></inicio>
+                <fin><dia>12</dia><mes>09</mes><año>2026</año></fin>
+            </semana>
+            <semana horario="tarde">
+                <inicio><dia>15</dia><mes>09</mes><año>2026</año></inicio>
+                <fin><dia>19</dia><mes>09</mes><año>2026</año></fin>
+            </semana>
+        </semanas>
+        <profesores>
+            <profesor tipo="teoria">
+                <nombre>Ana</nombre>
+                <apellidos>García López</apellidos>
+            </profesor>
+            <profesor tipo="practicas">
+                <nombre>Carlos</nombre>
+                <apellidos>Sánchez Pérez</apellidos>
+            </profesor>
+        </profesores>
+        <temas>
+            <tema numero="1">
+                <titulo>Introducción a HTML</titulo>
+                <resumen>Conceptos básicos de marcado.</resumen>
+                <palabrasClave>tags, estructura, semántica</palabrasClave>
+                <ejercicios>
+                    <practicos><cantidad>5</cantidad><duracion>2h</duracion></practicos>
+                    <teoricos><cantidad>10</cantidad><duracion>1h</duracion></teoricos>
+                </ejercicios>
+            </tema>
+            <tema numero="2">
+                <titulo>Estilos con CSS</titulo>
+                <resumen>Diseño y maquetación visual.</resumen>
+                <palabrasClave>flexbox, grid, colores</palabrasClave>
+                <ejercicios>
+                    <practicos><cantidad>3</cantidad><duracion>4h</duracion></practicos>
+                    <teoricos><cantidad>5</cantidad><duracion>30min</duracion></teoricos>
+                </ejercicios>
+            </tema>
+        </temas>
+    </curso>
+
+    </escuela>
