@@ -1,12 +1,10 @@
 package Ejercicio4;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Collections;
-
+import java.util.Map;
 
 
 public class Main {
@@ -16,6 +14,7 @@ public class Main {
             ArrayList<String> palabras = new ArrayList<>();
 
             BufferedReader br = new BufferedReader(new FileReader("palabras.txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("frecuencias.txt"));
 
             String linea = "";
 
@@ -38,8 +37,13 @@ public class Main {
                 System.out.println(p);
             }
 
-            for()
+            for(Map.Entry pareja : frecuencia.entrySet()){
+                bw.write(pareja.getKey() + ":");
+                bw.write(String.valueOf(pareja.getValue()) + "\n");
+            }
 
+            br.close();
+            bw.close();
 
         }catch(IOException e){
             System.err.println("No se ha podido leer el archivo");

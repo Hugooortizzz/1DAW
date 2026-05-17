@@ -1,0 +1,12 @@
+INCIDENCIAS POR ALUMNO
+Pablo:1
+Adrian:1
+FrancisoJose:1
+Hugo:1
+FranciscoJavier:1
+
+INCIDENCIAS POR TIPO
+tarea:null
+material:1
+retraso:1
+comportamiento:1

@@ -1,0 +1,5 @@
+Hugo;retraso
+FrancisoJose;tarea
+Adrian;material
+Pablo;comportamiento
+FranciscoJavier;tarea

@@ -1,0 +1,6 @@
+amarillo:1
+rojo:2
+verde:2
+azul:1
+morado:1
+rosa:1
