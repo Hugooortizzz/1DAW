@@ -1,0 +1,5 @@
+lapiz;hugo;NO
+raton;pablo;SI
+teclado;franciscoJose;NO
+webcam;miguel;NO
+silla;miguel;NO

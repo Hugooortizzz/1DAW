@@ -1,0 +1,4 @@
+A12: nourgente, hola, 
+P15: urgente, 
+T47: urgente, 
+B30: muyurgente, adios, 

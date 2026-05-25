@@ -1,0 +1,3 @@
+Programacion;5.0
+Sistemas Informaticos;9.0
+Lenguajes de Marcas;3.75
