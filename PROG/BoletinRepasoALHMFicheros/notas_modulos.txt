@@ -1,0 +1,5 @@
+Hugo;Programacion;10
+Pablo;Programacion;0
+Pablo;Lenguajes de Marcas;0
+Adrian;Lenguajes de Marcas;7.5
+Francisco Javier;Sistemas Informaticos;9
