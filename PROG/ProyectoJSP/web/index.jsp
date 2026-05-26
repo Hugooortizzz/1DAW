@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="personajes.GestionPersonajes"%>
+<%@page import="personajes.Personaje"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +37,6 @@
             align-items: center;
             justify-content: center;
             width: 50%;
-            background-color: rgb(239, 239, 239);
         }
 
         #layout{
@@ -77,6 +78,9 @@
 </head>
 
 <body>
+    <% 
+        GestionPersonajes.registrarDeFichero();
+    %>
     <div id="layout">
         <aside id="izquierda">
         </aside>
@@ -84,7 +88,8 @@
             <h1>Registrador de personajes</h1>
             <h2>¿Qué desea hacer?</h2>
             <a href="nuevo.jsp"><button>Añadir Personajes</button></a>
-            <button>Ver Personajes</button>
+            <a href="mostrar.jsp"><button>Ver Personajes</button></a>
+            <button>Editar personaje</button>
             <button>Simular combate</button>
         </div>
         <aside id="derecha">

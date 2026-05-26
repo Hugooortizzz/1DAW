@@ -1,6 +1,6 @@
 <%-- 
-    Document   : nuevo
-    Created on : May 20, 2026, 1:51:28 PM
+    Document   : index
+    Created on : May 20, 2026, 1:33:56 PM
     Author     : hugo
 --%>
 
@@ -11,10 +11,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Nuevo Personaje</title>
     <style>
-
-        *{
+        * {
             margin: 0;
         }
 
@@ -29,37 +28,53 @@
             font-size: 60px;
         }
 
-        #menu {
+        #centro{
+            width: 50%;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #mostrar {
+            display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             width: 50%;
             background-color: white;
         }
 
-        #menu div{
+        #menu{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 40px;
+        }
+
+        #menu div {
             margin: 10px 0;
         }
 
-        #layout{
+        #layout {
             display: flex;
             flex-direction: row;
             justify-content: center;
             width: 100%;
         }
 
-        aside{
+        aside {
             height: 100vh;
             width: 100px;
             width: 25%;
         }
 
-        #izquierda{
+        #izquierda {
             background-image: url("resources/asideiz.png");
         }
 
-        #derecha{
+        #derecha {
             background-image: url("resources/asideder.png");
         }
 
@@ -68,18 +83,26 @@
             border-radius: 2px;
         }
 
-        .finales{
-            width: 100px;
-            height: 50px;
+        .finales {
+            width: 65px;
+            height: 40px;
+            margin-right: 15px;
         }
 
-        .finales:hover{
+        .finales:hover {
             transform: scale(1.25);
         }
 
-        .finales:active{
+        .finales:active {
             transform: scale(0.95);
-        } 
+        }
+
+        #mostrarImagen{
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+        }
+
     </style>
 </head>
 
@@ -87,32 +110,58 @@
     <div id="layout">
         <aside id="izquierda">
         </aside>
-        <div id="menu">
+        <div id="centro">
             <h1>Nuevo Personaje</h1>
-            <div>
-                Nombre: <input type="text" id="nombre">
+            <div id="mostrar">
+            
+            <div id="imagen">
+                <img id="mostrarImagen" src="https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0">
             </div>
-            <div>
-                Estilo de combate: <button id="artesMatciales">Artes Marciales</button>
-                <button id="armas">Armas</button>
-                <button id="fruta">Fruta del diablo</button>
-            </div>
-            <div>
-                Escala de poder: <input type="number" id="poder" min="0" max="100">
-            </div>
-            <div>
-                Imagen: <input type="text" id="nombre">
-            </div>
-            <div>
-                <button class="finales" id="volver">Volver</button>
-                <button class="finales" id="enviar">Enviar</button>
+            <div id="menu">
+                <form action="resultado.jsp" method="post">
+                <div>
+                    Nombre: <input type="text" name="nombre">
+                </div>
+                <div>
+                    Estilo de combate:<br>
+                    <input type="checkbox" name="combate" value="Artes Marciales"> Artes Marciales<br>
+                    <input type="checkbox" name="combate" value="Armas"> Armas<br>
+                    <input type="checkbox" name="combate" value="Fruta Del Diablo"> Fruta del Diablo
+                </div>
+                <div>
+                    Escala de poder: <input type="number" name="poder" min="0" max="100">
+                </div>
+                <div>
+                    Imagen: <input type="text" id="url" name="imagen" onblur="cambiarImagen()" onkeyup="cambiarImagen()">
+                </div>
+                <div>
+                    <a href="index.jsp"><input type="button" class="finales" id="volver" value="Volver"></a>
+                    <input type="submit" class="finales" id="enviar" value="Enviar" />
+                </form>
+                </div>
             </div>
         </div>
+        </div>
+        
+
         <aside id="derecha">
         </aside>
     </div>
 
 
+    <script type="text/javascript">
+        function cambiarImagen(){
+            let imagen = document.getElementById("mostrarImagen");
+            let url = document.getElementById("url").value;
+            
+            imagen.src = url;
+            
+            //Esto controla que la imagen no pueda dar error, si no que si no encuentra una url valida, salga la imagen gris por defecto
+            imagen.onerror = function(){
+                imagen.src = "https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0";
+            };
+        }
+    </script>
 </body>
 
 </html>

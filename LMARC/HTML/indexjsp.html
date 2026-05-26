@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Nuevo Personaje</title>
     <style>
         * {
             margin: 0;
@@ -77,8 +77,9 @@
         }
 
         .finales {
-            width: 80px;
-            height: 50px;
+            width: 65px;
+            height: 40px;
+            margin-right: 15px;
         }
 
         .finales:hover {
@@ -89,7 +90,7 @@
             transform: scale(0.95);
         }
 
-        #imagen{
+        #mostrarImagen{
             width: 300px;
             height: 400px;
             border: 1px solid black;
@@ -107,28 +108,32 @@
             <div id="mostrar">
             
             <div id="imagen">
-                <img id="imagen" src="https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0">
+                <img id="mostrarImagen" src="https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0">
             </div>
             <div id="menu">
-                
+                <form action="resultado.jsp" method="post">
                 <div>
-                    Nombre: <input type="text" id="nombre">
+                    Nombre: <input type="text" name="nombre">
                 </div>
                 <div>
                     Estilo de combate:<br>
-                    <input type="checkbox" id="artesMarciales" name="combate" value="artesMarciales"> Artes Marciales<br>
-                    <input type="checkbox" id="armas" name="combate" value="armas"> Armas<br>
-                    <input type="checkbox" id="fruta" name="combate" value="fruta"> Fruta del Diablo
+                    <input type="checkbox" name="combate" value="Artes Marciales"> Artes Marciales
+                    <p><input type="text" name="infoCombate" style="display: none;"></p>
+                    <input type="checkbox" name="combate" value="Armas"> Armas<br>
+                    <p><input type="text" name="infoArmas" style="display: none;"></p>
+                    <input type="checkbox" name="combate" value="Fruta Del Diablo"> Fruta del Diablo
+                    <p><input type="text" name="infoFruta" style="display: none;"></p>
                 </div>
                 <div>
-                    Escala de poder: <input type="number" id="poder" min="0" max="100">
+                    Escala de poder: <input type="number" name="poder" min="0" max="100">
                 </div>
                 <div>
-                    Imagen: <input type="text" id="nombre">
+                    Imagen: <input type="text" id="url" name="imagen" onblur="cambiarImagen()" onkeyup="cambiarImagen()">
                 </div>
                 <div>
-                    <button class="finales" id="volver">Volver</button>
-                    <button class="finales" id="enviar">Enviar</button>
+                    <a href="index.jsp"><input type="button" class="finales" id="volver" value="Volver"></a>
+                    <input type="submit" class="finales" id="enviar" value="Enviar" />
+                </form>
                 </div>
             </div>
         </div>
@@ -140,6 +145,23 @@
     </div>
 
 
+    <script type="text/javascript">
+        function cambiarImagen(){
+            let imagen = document.getElementById("mostrarImagen");
+            let url = document.getElementById("url").value;
+            
+            imagen.src = url;
+            
+            //Esto controla que la imagen no pueda dar error, si no que si no encuentra una url valida, salga la imagen gris por defecto
+            imagen.onerror = function(){
+                imagen.src = "https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0";
+            };
+        }
+
+        function activarInput(){
+            
+        }
+    </script>
 </body>
 
 </html>

@@ -4,7 +4,12 @@
     Author     : hugo
 --%>
 
+<%@page import="java.io.FileWriter"%>
+<%@page import="java.io.BufferedWriter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="personajes.GestionPersonajes"%>
+<%@page import="personajes.Personaje"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="3; url=nuevo.jsp" />
 
-    <title>Inicio</title>
+    <title>Resultado</title>
     <style>
 
         *{
@@ -31,7 +36,7 @@
             font-size: 60px;
         }
 
-        #menu {
+        #mostrar {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -40,7 +45,7 @@
             background-color: white;
         }
 
-        #menu div{
+        #mostrar div{
             margin: 10px 0;
         }
 
@@ -53,7 +58,6 @@
 
         aside{
             height: 100vh;
-            width: 100px;
             width: 25%;
         }
 
@@ -90,36 +94,33 @@
         <aside id="izquierda">
         </aside>
         <div id="mostrar">
-            <div id="imagen">
-                <img src=""
-            </div>
-            <div id="menu">
-            <form method="get" action="resultado.jsp">
-            <h1>Personaje enviado/h1>
-            <div>
-                Volviendo a la creacion de personajes
-            </div>
-            <div>
-                Estilo de combate: <button id="artesMatciales">Artes Marciales</button>
-                <button id="armas">Armas</button>
-                <button id="fruta">Fruta del diablo</button>
-            </div>
-            <div>
-                Escala de poder: <input type="number" id="poder" min="0" max="100">
-            </div>
-            <div>
-                Imagen: <input type="text" id="nombre">
-            </div>
-            <div>
-                <button class="finales" id="volver">Volver</button>
-                <input type="submit" class="finales" id="enviar">Enviar</button>
-            </div>
-            </div>
+            <h1>
+                <%
+                    if(GestionPersonajes.añadirPersonaje(new Personaje(request.getParameter("nombre"), request.getParameterValues("combate"), Integer.parseInt(request.getParameter("poder")), request.getParameter("imagen")))){
+                    out.print("El personaje se ha creado correctamente");
+                    
+                    BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\hugom\\Documents\\1DAW\\1DAW\\PROG\\ProyectoJSP\\personajes.txt", true));
+                    
+                    String combate = String.join(",", request.getParameterValues("combate"));
+                    
+                    bw.write(request.getParameter("nombre") + ";" + combate + ";" + request.getParameter("poder") + ";" + request.getParameter("imagen") + "\n");
+                    
+                    bw.close();
+                    
+                }else{
+                    out.print("Error: El personaje ya existe");
+                }
+                %>
+            </h1>
+            <p>Volviendo a la página de creación de personaje</p>
+            <img src="https://media1.tenor.com/m/WX_LDjYUrMsAAAAC/loading.gif" width="50px">
         </div>
+        
         
         <aside id="derecha">
         </aside>
     </div>
+ 
 
 
 </body>
