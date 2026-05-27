@@ -18,6 +18,11 @@ public class Personaje {
     private int poder;
     private String imagen;
 
+    public Personaje() {
+    }
+
+    
+    
     public Personaje(String nombre, String[] estiloCombate, int poder, String imagen) {
         this.nombre = nombre;
         this.estiloCombate = estiloCombate;

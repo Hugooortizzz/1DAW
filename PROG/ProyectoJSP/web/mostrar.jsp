@@ -87,6 +87,7 @@
             width: 65px;
             height: 40px;
             margin-right: 15px;
+            margin-top: 5px;
         }
 
         .finales:hover {
@@ -115,16 +116,28 @@
             <div id="mostrar">
                 <%for(Personaje p : GestionPersonajes.getPersonajes()){ %>
                     <div class="personaje">
+                        <form action="editar.jsp" method="post">
                         <img id="mostrarImagen"
                              src= "<% out.print(p.getImagen()); %>"><br>
                         <p><b>Nombre: </b><% out.print(p.getNombre()); %></p>
+                        <input type="hidden" name="nombre" value="<% out.print(p.getNombre()); %>">
                         <p><b>Estilos de combate:</b></p><dt><% 
                                 for(int i = 0; i< p.getEstiloCombate().length; i++){
                                     out.print("<dd>" + p.getEstiloCombate()[i] + "</dd>");
                                 }%>
                         </dt>
                             <p><b>Poder: </b><% out.print(p.getPoder()); %></p>
+                            <div>
+                                <input type="submit" value="Editar" class="finales">
+                                </form>
+                                <form action="borrar.jsp" method="post">
+                                    <input type="hidden" name="nombre" value="<% out.print(p.getNombre()); %>">
+                                    <input type="submit" class="finales" id="borrar" value="Borrar">
+                                </form>
+                            </div>
+                            
                 </div>
+                
                 <%}; %>
                 
             </div>
@@ -151,6 +164,8 @@
                 imagen.src = "https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0";
             };
         }
+        
+      
     </script>
 </body>
 

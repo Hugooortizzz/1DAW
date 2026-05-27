@@ -1,9 +1,11 @@
 <%-- 
-    Document   : resultado
+    Document   : borrar
     Created on : May 20, 2026, 1:56:10 PM
     Author     : hugo
 --%>
 
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.FileReader"%>
 <%@page import="java.io.FileWriter"%>
 <%@page import="java.io.BufferedWriter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,9 +18,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3; url=nuevo.jsp" />
+    <meta http-equiv="refresh" content="3; url=mostrar.jsp" />
 
-    <title>Resultado</title>
+    <title>Borrar</title>
     <style>
 
         *{
@@ -96,23 +98,27 @@
         <div id="mostrar">
             <h1>
                 <%
-                    if(GestionPersonajes.añadirPersonaje(new Personaje(request.getParameter("nombre"), request.getParameterValues("combate"), Integer.parseInt(request.getParameter("poder")), request.getParameter("imagen")))){
-                    out.print("El personaje se ha creado correctamente");
+                    out.print("Borrando personaje");
+                    //Borra del array
+                    GestionPersonajes.borrarPersonaje(request.getParameter("nombre"));
                     
-                    BufferedWriter bw = new BufferedWriter(new FileWriter("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt", true));
+                    //Borra del fichero
+                    BufferedReader br = new BufferedReader(new FileReader("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt"));
+                    BufferedWriter bw = new BufferedWriter(new FileWriter("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt"));
                     
-                    String combate = String.join(",", request.getParameterValues("combate"));
+                    String linea = "";
                     
-                    bw.write(request.getParameter("nombre") + ";" + combate + ";" + request.getParameter("poder") + ";" + request.getParameter("imagen") + "\n");
+                    while (linea != null){
+                        linea = br.readLine();
+                        
+                        if (linea != null){
+                            if(!linea.contains)
+                        }
+                    }
                     
-                    bw.close();
-                    
-                }else{
-                    out.print("Error: El personaje ya existe");
-                }
                 %>
             </h1>
-            <p>Volviendo a la página de creación de personaje</p>
+            <p>Volviendo a la página de mostrar personajes</p>
             <img src="https://media1.tenor.com/m/WX_LDjYUrMsAAAAC/loading.gif" width="50px">
         </div>
         

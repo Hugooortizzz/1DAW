@@ -20,7 +20,7 @@ public class GestionPersonajes {
     
     public static void registrarDeFichero() throws IOException{
         personajes.clear();
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\hugom\\Documents\\1DAW\\1DAW\\PROG\\ProyectoJSP\\personajes.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt"));
         
         String linea = "";
         
@@ -46,6 +46,28 @@ public class GestionPersonajes {
         
         return false;
     }
+    
+    public static void borrarPersonaje(String nombre){
+        Personaje borrar = new Personaje();
+        for(Personaje p : personajes){
+            if(p.getNombre().equals(nombre)){
+                borrar = p;
+            }
+        }
+        personajes.remove(borrar);
+    }
+    
+    public static int buscarIndice(String nombre){
+        for(Personaje p : personajes){
+               if(p.getNombre().equals(nombre)){
+                   return personajes.indexOf(p);
+               }
+        }
+        
+        return -1;
+    }
+    
+   
     
     public static ArrayList<String> nombresPersonajes(){
         ArrayList<String> resultado = new ArrayList<>();

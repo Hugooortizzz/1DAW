@@ -89,7 +89,6 @@
             <h2>¿Qué desea hacer?</h2>
             <a href="nuevo.jsp"><button>Añadir Personajes</button></a>
             <a href="mostrar.jsp"><button>Ver Personajes</button></a>
-            <button>Editar personaje</button>
             <button>Simular combate</button>
         </div>
         <aside id="derecha">

@@ -4,7 +4,10 @@
     Author     : hugo
 --%>
 
+<%@page import="java.util.Arrays"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="personajes.GestionPersonajes"%>
+<%@page import="personajes.Personaje"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -107,11 +110,14 @@
 </head>
 
 <body>
+    <% 
+        int indice = GestionPersonajes.buscarIndice(request.getParameter("nombre"));
+    %>
     <div id="layout">
         <aside id="izquierda">
         </aside>
         <div id="centro">
-            <h1>Nuevo Personaje</h1>
+            <h1>Editar Personaje</h1>
             <div id="mostrar">
             
             <div id="imagen">
@@ -120,27 +126,30 @@
             <div id="menu">
                 <form action="resultado.jsp" method="post">
                 <div>
-                    Nombre: <input type="text" name="nombre">
+                    Nombre: <input type="text" name="nombre" value="<%out.print(GestionPersonajes.getPersonajes().get(indice).getNombre());%>">
                 </div>
                 <div>
                     Estilo de combate:<br>
-                    <input type="checkbox" name="combate" value="artesMarciales"> Artes Marciales<br>
-                    <input type="checkbox" name="combate" value="armas"> Armas<br>
-                    <input type="checkbox" name="combate" value="fruta"> Fruta del Diablo
+                    <input type="checkbox" name="combate" value="Artes Marciales" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Artes Marciales")){ out.print("checked");} %>> Artes Marciales<br>
+                    <input type="checkbox" name="combate" value="Armas" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Armas")){ out.print("checked");} %>> Armas<br>
+                    <input type="checkbox" name="combate" value="Fruta del Diablo" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Fruta Del Diablo")){ out.print("checked");} %>> Fruta del Diablo
                 </div>
                 <div>
-                    Escala de poder: <input type="number" name="poder" min="0" max="100">
+                    Escala de poder: <input type="number" name="poder" min="0" max="100" value="<%out.print(GestionPersonajes.getPersonajes().get(indice).getPoder());%>">
                 </div>
                 <div>
-                    Imagen: <input type="text" id="url" name="imagen" onblur="cambiarImagen()" onkeyup="cambiarImagen()">
+                    Imagen: <input type="text" id="url" name="imagen"  value="<%out.print(GestionPersonajes.getPersonajes().get(indice).getImagen());%>" onblur="cambiarImagen()" onkeyup="cambiarImagen()">
                 </div>
                 <div>
-                    <a href="index.jsp"><input type="button" class="finales" id="volver" value="Volver"></a>
+                    <a href="mostrar.jsp"><input type="button" class="finales" id="volver" value="Volver"></a>
                     <input type="submit" class="finales" id="enviar" value="Enviar" />
                 </form>
                 </div>
             </div>
         </div>
+            <div>
+                <button id="izquierda"><</button><button id="derecha">></button>
+            </div>
         </div>
         
 
@@ -150,6 +159,10 @@
 
 
     <script type="text/javascript">
+        window.onload = function(){
+            cambiarImagen();
+        }
+        
         function cambiarImagen(){
             let imagen = document.getElementById("mostrarImagen");
             let url = document.getElementById("url").value;
