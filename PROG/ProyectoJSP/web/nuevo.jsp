@@ -126,7 +126,8 @@
                     Estilo de combate:<br>
                     <input type="checkbox" name="combate" value="Artes Marciales"> Artes Marciales<br>
                     <input type="checkbox" name="combate" value="Armas"> Armas<br>
-                    <input type="checkbox" name="combate" value="Fruta Del Diablo"> Fruta del Diablo
+                    <input type="checkbox" name="combate" value="Fruta Del Diablo"> Fruta Del Diablo<br>
+                    <input type="checkbox" name="combate" value="Haki"> Haki
                 </div>
                 <div>
                     Escala de poder: <input type="number" name="poder" min="0" max="100">

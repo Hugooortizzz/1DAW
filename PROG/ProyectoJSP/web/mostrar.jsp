@@ -104,6 +104,14 @@
             border: 1px solid black;
         }
         
+        #botonesEnviar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
     </style>
 </head>
 
@@ -127,7 +135,7 @@
                                 }%>
                         </dt>
                             <p><b>Poder: </b><% out.print(p.getPoder()); %></p>
-                            <div>
+                            <div id="botonesEnviar">
                                 <input type="submit" value="Editar" class="finales">
                                 </form>
                                 <form action="borrar.jsp" method="post">

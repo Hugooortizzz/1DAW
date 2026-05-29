@@ -101,20 +101,7 @@
                     out.print("Borrando personaje");
                     //Borra del array
                     GestionPersonajes.borrarPersonaje(request.getParameter("nombre"));
-                    
-                    //Borra del fichero
-                    BufferedReader br = new BufferedReader(new FileReader("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt"));
-                    BufferedWriter bw = new BufferedWriter(new FileWriter("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt"));
-                    
-                    String linea = "";
-                    
-                    while (linea != null){
-                        linea = br.readLine();
-                        
-                        if (linea != null){
-                            if(!linea.contains)
-                        }
-                    }
+                    GestionPersonajes.actualizarFichero();
                     
                 %>
             </h1>

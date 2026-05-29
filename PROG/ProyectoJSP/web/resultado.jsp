@@ -33,6 +33,7 @@
         h1 {
             text-align: center;
             font-family: "OnePiece";
+            
             font-size: 60px;
         }
 
@@ -98,14 +99,7 @@
                 <%
                     if(GestionPersonajes.añadirPersonaje(new Personaje(request.getParameter("nombre"), request.getParameterValues("combate"), Integer.parseInt(request.getParameter("poder")), request.getParameter("imagen")))){
                     out.print("El personaje se ha creado correctamente");
-                    
-                    BufferedWriter bw = new BufferedWriter(new FileWriter("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt", true));
-                    
-                    String combate = String.join(",", request.getParameterValues("combate"));
-                    
-                    bw.write(request.getParameter("nombre") + ";" + combate + ";" + request.getParameter("poder") + ";" + request.getParameter("imagen") + "\n");
-                    
-                    bw.close();
+                    GestionPersonajes.actualizarFichero();
                     
                 }else{
                     out.print("Error: El personaje ya existe");

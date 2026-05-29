@@ -124,15 +124,18 @@
                 <img id="mostrarImagen" src="https://imgs.search.brave.com/XtJK0itkXwynQ-cJdo14VYm_cLaHC7nT796fBajKpu4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE3/NzU1MzQ3NzgzNzUt/M2YyMzVjNDY2YzU4/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZhdXRv/PWZvcm1hdCZmaXQ9/Y3JvcCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE1qQjhmSEJzWVds/dUpUSXdkMmhwZEdW/OFpXNThNSHg4TUh4/OGZEQT0">
             </div>
             <div id="menu">
-                <form action="resultado.jsp" method="post">
+                <form action="resultadoEditar.jsp" method="post">
                 <div>
                     Nombre: <input type="text" name="nombre" value="<%out.print(GestionPersonajes.getPersonajes().get(indice).getNombre());%>">
+                    <!-- input oculto con el nombre original por si el usuario lo cambia, para poder identificar cual era al enviar el formulario -->
+                    <input type="hidden" name="nombreOriginal" value="<%out.print(GestionPersonajes.getPersonajes().get(indice).getNombre());%>"
                 </div>
                 <div>
                     Estilo de combate:<br>
-                    <input type="checkbox" name="combate" value="Artes Marciales" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Artes Marciales")){ out.print("checked");} %>> Artes Marciales<br>
-                    <input type="checkbox" name="combate" value="Armas" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Armas")){ out.print("checked");} %>> Armas<br>
-                    <input type="checkbox" name="combate" value="Fruta del Diablo" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Fruta Del Diablo")){ out.print("checked");} %>> Fruta del Diablo
+                    <input type="checkbox" name="estiloCombate" value="Artes Marciales" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Artes Marciales")){ out.print("checked");} %>> Artes Marciales<br>
+                    <input type="checkbox" name="estiloCombate" value="Armas" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Armas")){ out.print("checked");} %>> Armas<br>
+                    <input type="checkbox" name="estiloCombate" value="Fruta del Diablo" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Fruta Del Diablo")){ out.print("checked");} %>> Fruta del Diablo<br>
+                    <input type="checkbox" name="combate" value="Haki" <% if (Arrays.asList(GestionPersonajes.getPersonajes().get(indice).getEstiloCombate()).contains("Haki")){ out.print("checked");} %>> Haki
                 </div>
                 <div>
                     Escala de poder: <input type="number" name="poder" min="0" max="100" value="<%out.print(GestionPersonajes.getPersonajes().get(indice).getPoder());%>">
@@ -147,10 +150,8 @@
                 </div>
             </div>
         </div>
-            <div>
-                <button id="izquierda"><</button><button id="derecha">></button>
-            </div>
         </div>
+    </div>
         
 
         <aside id="derecha">

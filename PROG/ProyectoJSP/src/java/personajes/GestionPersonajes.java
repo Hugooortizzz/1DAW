@@ -1,8 +1,10 @@
 package personajes;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -20,7 +22,7 @@ public class GestionPersonajes {
     
     public static void registrarDeFichero() throws IOException{
         personajes.clear();
-        BufferedReader br = new BufferedReader(new FileReader("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\hugom\\Documents\\1DAW\\1DAW\\PROG\\ProyectoJSP\\personajes.txt"));
         
         String linea = "";
         
@@ -66,6 +68,35 @@ public class GestionPersonajes {
         
         return -1;
     }
+    
+    public static void actualizarFichero() throws IOException{
+        BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\hugom\\Documents\\1DAW\\1DAW\\PROG\\ProyectoJSP\\personajes.txt"));
+        
+        for(Personaje p : personajes){
+            bw.write(p.getNombre() + ";");
+            for(int i=0; i < p.getEstiloCombate().length; i++){
+                if(i < p.getEstiloCombate().length - 1){
+                    bw.write(p.getEstiloCombate()[i] + ",");
+                }else{
+                    bw.write(p.getEstiloCombate()[i]);
+                }
+            }
+            bw.write(";" + p.getPoder() + ";" + p.getImagen() + "\n");
+        }
+        
+        bw.close();
+    }
+    
+    /*public static Personaje obtenerPersonaje(String nombre){
+        Personaje resultado = new Personaje();
+        for(Personaje p : personajes){
+            if (p.getNombre().equals(nombre)){
+                resultado = p;
+            }
+        }
+        
+        return resultado;
+    }*/
     
    
     

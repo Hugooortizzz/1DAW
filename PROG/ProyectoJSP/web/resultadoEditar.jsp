@@ -1,5 +1,5 @@
 <%-- 
-    Document   : resultado
+    Document   : resultadoEditar
     Created on : May 20, 2026, 1:56:10 PM
     Author     : hugo
 --%>
@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3; url=nuevo.jsp" />
+    <meta http-equiv="refresh" content="3; url=mostrar.jsp" />
 
     <title>Resultado</title>
     <style>
@@ -96,20 +96,13 @@
         <div id="mostrar">
             <h1>
                 <%
-                    if(GestionPersonajes.añadirPersonaje(new Personaje(request.getParameter("nombre"), request.getParameterValues("combate"), Integer.parseInt(request.getParameter("poder")), request.getParameter("imagen")))){
-                    out.print("El personaje se ha creado correctamente");
-                    
-                    BufferedWriter bw = new BufferedWriter(new FileWriter("/home/hugo/Documents/1DAW/PROG/ProyectoJSP/personajes.txt", true));
-                    
-                    String combate = String.join(",", request.getParameterValues("combate"));
-                    
-                    bw.write(request.getParameter("nombre") + ";" + combate + ";" + request.getParameter("poder") + ";" + request.getParameter("imagen") + "\n");
-                    
-                    bw.close();
-                    
-                }else{
-                    out.print("Error: El personaje ya existe");
-                }
+                    int indice = GestionPersonajes.buscarIndice(request.getParameter("nombreOriginal"));
+                    GestionPersonajes.getPersonajes().get(indice).setNombre(request.getParameter("nombre"));
+                    GestionPersonajes.getPersonajes().get(indice).setEstiloCombate(request.getParameterValues("estiloCombate"));
+                    GestionPersonajes.getPersonajes().get(indice).setPoder(Integer.parseInt(request.getParameter("poder")));
+                    GestionPersonajes.getPersonajes().get(indice).setImagen(request.getParameter("imagen"));
+                    out.print("El personaje se ha editado correctamente");
+                    GestionPersonajes.actualizarFichero();
                 %>
             </h1>
             <p>Volviendo a la página de creación de personaje</p>
